@@ -7,6 +7,8 @@
 	\usepackage[italian]{babel}  
 	\usepackage[bookmarks=true]{hyperref}
 	\usepackage{bookmark}
+	\usepackage{esopic}
+	
 	\geometry{letterpaper}	
 
 \hypersetup{
@@ -60,12 +62,20 @@
 %\title{Optoelettronica}
 %\author{Edoardo Contini}
 %\date{}
-	
 
 
-
+        \newpage
+        \null 
+        \thispagestyle{empty} 
+        \newpage
+        
 %\maketitle
 \tableofcontents
+		\newpage
+        \null 
+        \thispagestyle{empty} 
+        \newpage
+
 \pdfbookmark{\contentsname}{Indice}
 
 \chapter{Distribuzioni di carica}
@@ -92,7 +102,29 @@
 		C=\frac{2 \pi \epsilon_0}{ln(\frac{d^2}{R^+R^-})}
 		\end{equation}
 
+	\section{Distribuzioni di carica lineare}
+
+		\subsection{Tensione dovuta a distribuzioni di carica lineari}
+
+		\[
+		V=\frac{\rho}{2\pi \epsilon}ln(\frac{d_{punto_carica}}{d_{carica-origine}})
+		\]
+	\section{Cariche puntiformi}
+
+		Il potenziale in un punto P dello spazione generato da una carica puntiforme come risultato dell integrazione del campo coulombiano risulta:
+
+		\[
+		V(P)=\frac{Q}{4\pi \epsilon r}
+		\]
+		Dove:
+		\begin{itemize}
+		\item "Q" è la arica puntiforme
+
+		\item "r" è la distanza del punto P\footnote{In cui calcoliamo il potenziale} dalla carica.
+		\end{itemize}
+
 \chapter{Metodo delle immagini}	
+
 
 \section{Piano conduttore}
 
@@ -121,6 +153,12 @@ d'=\frac{R^2}{d}
 			B=\frac{\mu IR^2}{2(z^2+R^2)^{\frac{3}{2}}}
 			\end{equation}
 
+		\subsection{Legge di Faraday-Neumann-Lenz}
+
+		\[
+		f.e.m.=Area* \mu \frac{dH}{dt} cos(\theta) 
+		\]
+
 	\section{Solenoide}
 		\subsection{Campo magnetico in un solenoide}
 			Il campo magnetico al centro di un solenoide\footnote{Assumento il solenoide riempito con un materiale con permeabilità magnetica relativa $\mu_r$} è:
@@ -138,7 +176,7 @@ d'=\frac{R^2}{d}
 
 		\subsection{Induttanza solenoide}
 				\begin{equation} 
-				L=\mu \frac{N^2S}{L}
+				L=\mu \frac{N^2S}{l}
 				\label{eq:induttanza-solenoide}
 				\end{equation}
 
@@ -174,6 +212,7 @@ d'=\frac{R^2}{d}
 
 			\begin{equation}
 			C=\frac{\rho_l 2 \pi \epsilon_0}{\rho_l ln(\frac{d^2}{R^-R^+})}
+			\label{eq:capacitabifilare}
 			\end{equation}
 
 
@@ -208,6 +247,8 @@ d'=\frac{R^2}{d}
 
 
 		\subsection{Linee bifilari}
+
+		Ricordando la ~\ref{eq:capacitabifilare} e la relazione $L=\frac{\mu_0 \epsilon_0}{C_0}$ è immediato calcolare l'induttanza della linea.
 
 		\subsection{Microstrisce}
 			
@@ -270,8 +311,9 @@ d'=\frac{R^2}{d}
 
 		\subsection{Microstrisce}
 
+			Analogamente ai casi precedenti si calcola le resistenza considerando il solo spessore di conduttore ricavato con lo spessore pelle e la larghezza della microstriscia.\footnote{Il calcolo è quindi analogo alla linea coassiale sostiuendo il perimetro con la larghezza della microstriscia}
 
-		\section{Conduttanza per unità di lunghezza}
+	\section{Conduttanza per unità di lunghezza}
 
 			\begin{equation}
 			g=\frac{\sigma C}{\epsilon}
@@ -308,7 +350,12 @@ d'=\frac{R^2}{d}
 			\item $\alpha=\alpha_d+\alpha_c$ è òa costante di attenuazione totale che tiene conto sia delle perdite nel dielettrico che nei conduttori.
 			\end{itemize}
 
+	\section{Conversione Np-dB}
 
+	\[
+	1\frac{Np}{m}=8,868\frac{dB}{km}
+	\]
+	
 	\section{Potenza associata all'onda progressiva}
 
 			\begin{equation}
@@ -384,6 +431,20 @@ d'=\frac{R^2}{d}
 
 	\section{Condizioni al contorno per il campo elettrico}
 
+		Nell interfaccia tra mezzi con costante dielettrica diversa abbiamo che:
+		\begin{equation}
+		E_{t1}=E_{t2} 
+		\end{equation}
+		cioé $\epsilon_1 D_{t1} = \epsilon_2 D_{t2}$.
+		Mentre per la componente normale si ha:
+		\begin{equation}
+		D_{n1} = D_{n2}
+		\end{equation}
+		cioè:
+		\[
+		\frac{E_{n1}}{\epsilon_1}=\frac{E_{n2}}{\epsilon_2}
+		\]
+
 	\section{Condizioni al contorno per il campo magnetico}
 		Nell interfaccia tra mezzi con permeabilità magnetica diversa:
 		\begin{equation}
@@ -394,6 +455,14 @@ d'=\frac{R^2}{d}
 		\begin{equation}
 		H_{t1}=H_{t2}
 		\end{equation}
+
+	\section{Campo elettrico e campo magnetico}
+
+	Conoscendo la densità di potenza propagante possiamo calcolare il modulo di campo elettrico e magnetico come:
+
+	\[
+	S=\frac{E^2}{2\eta_{mezzo}}=\frac{H^2}{2}\eta_{mezzo}
+	\]
 
 	\section{Vettore di Poynting}
 		Per una radiazione propagante in un mezzo possiamo calcolare il valore medio del vettore di Poynting come:
@@ -419,9 +488,20 @@ d'=\frac{R^2}{d}
 	\section{Angolo di trasmissione}
 
 	\begin{equation}
-	\theta_T=\arcsin(\frac{\sqrt{\epsilon_{r1}}}{\sqrt{\epsilon_{r1}}}\sin(\theta_i)
+	\theta_T=\arcsin(\frac{\sqrt{\epsilon_{r1}}}{\sqrt{\epsilon_{r2}}}\sin(\theta_i)
 	\end{equation} 
 	
+	\section{Condizioni limite}
+
+		\subsection{T.I.R.}
+			La condizione trasmissione totale interna implica un coefficiente di riflessione $\Gamma$ unitario.
+
+			\textbf{NOTA:}
+
+			Si ricordi che in caso si TIR il fatto che non ci sia potenza trasmessa nel mezzo 2 non implica il fatto che campi siamo nulli.
+			L'intensità dei campi nel mezzo 2 possono essere calcolati attraverso la valutazione dell'onda evanescente:
+		
+		\subsection{Angolo di Brewster}
 
 	\section{Modo trasverso elettrico}
 
@@ -434,7 +514,7 @@ d'=\frac{R^2}{d}
 			Conoscendo le impedenze intrinseche posso calcolare il coefficiente di riflessione per il modo TE come:
 
 			\[
-			\Gamma_{TE}=\frac{\eta_{TE1}-\eta_{TE1}}{\eta_{TE1}+\eta_{TE1}}
+			\Gamma_{TE}=\frac{\eta_{TE1}-\eta_{TE2}}{\eta_{TE1}+\eta_{TE2}}
 			\]
 			 Si noti che questo coefficiente di riflessione è valido solo per la componente normale del campo elettrica.
 
@@ -485,7 +565,10 @@ d'=\frac{R^2}{d}
 			E(x,y)=E(0,0)e^-{j\gamma_x x}e^-{j\gamma_y y}
 			\]
 		
+			\textbf{NOTA:}
 
+			Si ricordi che studiando il modo trasverso elettrico il coefficiente di riflessione va applicato alla sola componente tangente del campo elettrico\footnote{Unica presente in modo TE}.
+			
 	\section{Modo trasverso magnetico}
 
 			\subsection{Impedenza instrinseca TM}
@@ -494,12 +577,16 @@ d'=\frac{R^2}{d}
 					\eta_{TM}=\frac{\eta_0}{\sqrt{\epsilon_r}}\cos(\theta)
 				\end{equation}
 
+			\textbf{NOTA:}
+
+			Si ricordi che studiando il modo trasverso magnetico il coefficiente di riflessione $\Gamma$ va utilizzato per calcolare la componente di campo elettrico trasmesso normale all'interfaccia.
+			Ricavando poi con la legge di Snell l'angolo di trasmissione e conoscendo la componente normale posso trovare il campo trasmesso totale.
 
 		\subsection{Coefficiente di riflessione}
 			Conoscendo le impedenze intrinseche posso calcolare il coefficiente di riflessione per il modo TM come:
 
 			\[
-			\Gamma_{TM}=\frac{\eta_{TM1}-\eta_{TM1}}{\eta_{TM1}+\eta_{TM1}}
+			\Gamma_{TM}=\frac{\eta_{TM1}-\eta_{TM2}}{\eta_{TM1}+\eta_{TM2}}
 			\]
 			 Si noti che questo coefficiente di riflessione è valido solo per la componente normale del campo elettrica.
 			 \\
@@ -601,17 +688,18 @@ d'=\frac{R^2}{d}
 
 		\subsection{Circuito aperto}
 
-		\subsection{Doppio stub}
+		Il procedimento per il dimensionamento di stub parallelo a circuito aperto è analogo a quello utilizzoìato per lo stub parallelo a corto circuito con l'unica differenza che nel detrminare la lunghezza dello stesso la rotazione sulla carta si Smith deve partire dal punto ad impedenza infinita, cioè ammettenza nulla.
+
+	\textbf{NOTA:}
+
+	Si ricordi che sarebbe possibile utilizzare anche la carta di Smith delle impedenze per trattare stub parallelo, bisognerebbe però avere l'accortezza di comporre le impedenze in parallelo, non in sommandole in serie come è possbile fare con le ammettenze.
+
 	
 	\section{Stub serie}
 
-	 	Dimensionando l'addatamento con stub serie è necessadio unare la carta si delle impedenze.
+	 	Il metodo di dimensionamento degli stub serie è duale a quello per gli stub parallelo. E' però necessario unsare la carta di Smith delle impedenze, sommando queste tra loro.
 
-		\subsection{Corto circuito}
-
-
-		\subsection{Circuito aperto}
-
+		
 	\section{Adattamento con carico reattivo}
 
 		Analogamente a quanto visto per gli adattatori a neutralizzazione e stub parallelo e serie, un altro metodo di adattamento del carico consiste nell'inserimento in linea di un carico reattivo\footnote{Capacità o induttanza}.
@@ -619,8 +707,26 @@ d'=\frac{R^2}{d}
 		Analogamente al discorso fatto per gli stub il carico reattivo puuò essere aggiunto in serie o in parallelo
 
 		\subsection{Serie}
-
+			Con un approccio analogo a quello utilizzato per gli stub serie si lavora con la carta di Smith delle impedenze.
 		\subsection{Parallelo}
+					Con un approccio analogo a quello utilizzato per gli stub parallelo si lavora con la carta di Smith delle ammettenze.
+
+	\section{Tensione su carico adattato}
+
+	Per trovare la tensione sul carico adattato si utilizza l'espressione:
+
+	\[
+	P_d= \frac {V_{load}^2}{2} Re[ Y_{load}] \}
+	\]
+	porchè tutta la potenza disponibile viene trasferita al carico.
+
+	Per trovare invece la corrente che fluisce nel carico si utilizza la legge di ohm:
+
+	\[
+	I=\frac{V}{|Z_{load}|}
+	\]
+
+
 
 \chapter{Propagazione in linea}
 
@@ -630,7 +736,7 @@ d'=\frac{R^2}{d}
 		In caso di adattamento abbiamo che tutta la potenza disponibile è trasferita al carico e in particolare vale:
 			
 			\begin{equation}
-			P=(\frac{V_g}{2})^2\frac{1}{2Z}=(\frac{V_g}{2})^2\frac{1}{2}Re\{Y_L\}
+			P_L=P_d=(\frac{V_g}{2})^2\frac{1}{2Z_g}=\frac{V_g^2}{8Z_g}
 			\end{equation}
 
 			La potenza trasmessa al carico può anche essere calcolata tramite il vettore di pointing e il coefficiente di riflessione:
@@ -645,8 +751,32 @@ d'=\frac{R^2}{d}
 			\begin{equation}
 			P_{load}=P_{inc}(1-|\Gamma|^2)
 			\end{equation}
-		
-	\section{Tensione e corrente sulla linea}
+	\section{Tensione al carico}
+
+			\begin{equation}
+			P_L=\frac{V_{L}}{2}Re\{Y_L\}
+			\label{eq:tensionealcarico}
+			\end{equation}
+
+			Tale relazione può essere utilizzata per ricavare la tensione in ogni punto della linea considerando la potenza e l'impedenza viste ad una determinata interfaccia.
+	\section{Corrente al carico}
+
+
+			\begin{equation}
+			P_L=\frac{I_{L}}{2}Re\{Z_L\}
+			\label{eq:correntealcarico}
+			\end{equation}
+			Come per la \ref{eq:tensionealcarico} tale relazione può essere utilizzata in ogni punto della linea.
+	\section{Legge di Ohm}
+
+	Possiamo utilizzare la legge di Ohm per ricavare la corrente conoscendo la tensione o viceversa , utilizzando il modulo dell impedenza come segue:
+
+	\[
+	I_L=\frac{V_L}{|Z_L|}
+	\]
+
+			Come per la \ref{eq:tensionealcarico} e la \ref{eq:correntealcarico} tale relazione può essere utilizzata in ogni punto della linea.
+
 
 	\section{Attenuazione}
 
@@ -666,6 +796,41 @@ d'=\frac{R^2}{d}
 	\begin{equation}
 	ROS=\frac{|V_{max}|}{|V_{min}|}=\frac{|V_o^+|(1+|\Gamma|)}{|V_o^+|(1-|\Gamma|)}
 	\end{equation}
+
+	\section{Linee attenuative}
+
+		\subsection{Coefficiente di riflessione al carico}
+
+		\[
+		\Gamma_L=\frac{Z_C-Z_L}{Z_C+Z_L}
+		\]
+		\subsection{Coefficiente di attenuazione attenuato}
+		Lungo la linea con perdite il coefficiente di riflessione viene attenuato come:
+		\[
+		\Gamma_{attenuato}=\Gamma_L e^{-2\alpha L}
+		\]
+		Riportando sulla carta di Smith il coefficiente di riflessione attenuato possiamo ottenere l'impedenza vista all'interfaccia di ingresso, da cui è possibile ricavare il coefficiente di riflessione in ingresso:
+
+		\[
+		\Gamma_{in}=\frac{Z_G-Z_{BB}}{Z_G+Z_{BB}}
+		\]
+
+		Da cui conoscendo la potenza incidente possiamo ricavare la potenza immessa in linea come:
+
+		\[
+		P_{in}=P_d(1-|\Gamma|^2)
+		\]
+
+		\subsection{Tensione all'interfaccia di ingresso}
+
+		Conoscendo l'impedenza di ingresso possiamo applicare un partitore di tensione come:
+
+		\[
+		V_{in}=V_g|\frac{Z_{in}}{Z_{in}+Z_g}|
+		\]
+		\textbf{NOTA:}
+
+		Si faccia attenzione al fatto che trattando potenze propaganti in linea è necessario considerare solo le parti reali delle impedenze o delle ammettenze.
 
 \chapter{Guide d'onda}
 		
@@ -688,6 +853,8 @@ d'=\frac{R^2}{d}
 				f_w=\frac{\frac{c}{2a}+\frac{c}{2b}}{2}
 				\end{equation}
 
+				Si ricordi che questa relazione è valida solo nel caso in cui $b<a<2b$
+
 		\subsection{Frequenza di cut}
 	
 				La frequenza di cut è la frequenza limite di funzionamento monomodale
@@ -708,16 +875,38 @@ d'=\frac{R^2}{d}
 
 
 
-		\subsection{Impedenza modale}
+		\subsection{Impedenza modale nel vuoto}
 
 				\begin{equation}
-				\eta_{TE}=\frac{\eta_0}{ \sqrt{ 1- ( \frac {f_{cut}} {f_{work}} )^2 } }
+				\eta_{TE_{vuoto}}=\frac{\eta_0}{ \sqrt{ 1- ( \frac {f_{cut}} {f_{work}} )^2 } }
+				\end{equation}
+		\subsection{Impedenza modale nel setto di dielettrico}
+
+				\begin{equation}
+				\eta_{TE_{setto}}=\frac{\eta_0}{\sqrt{\epsilon_r} \sqrt{ 1- ( \frac {f_{cut}} {\sqrt{\epsilon_r} f_{work}} )^2 } }
 				\end{equation}
 
-			\subsection{Potenza in guida}
+		\subsection{Coefficiente di riflessione}
+
+			\[
+			\Gamma_{TE}=\frac{\eta_{TE_{vuoto}}-\eta_{TE_{setto}}}{\eta_{TE_{vuoto}}+\eta_{TE_{setto}}}
+			\]
+		\subsection{Campo elettrico nel setto di dielettrico}
+		\[
+		E_{max}=E_g(1+|\Gamma|)
+		\]
+
+		\[
+		E_{min}=E_g(1-|\Gamma|)
+		\]
+
+
+		\subsection{Potenza in guida}
 				\begin{equation}
 				P_0=\frac{E_0^2}{4\eta_{TE}}ab
 				\end{equation}
+				Si noti che nel caso di inserimento di un setto $\lambda/2$ in guida abbiamo un onda viaggiante , l'inviluppo del campo elettrico è quindi costante tranne nel setto di dielettrico in cui è simmetrico rispetto al punto medio , in questo caso $E_0$ coincide con $E_{max}$
+		
 
 \chapter{Propagazione di onde piane}
 
@@ -740,7 +929,7 @@ d'=\frac{R^2}{d}
 
 
 		\begin{equation}
-		P=S*Area=\frac{EH}{2}*Area=\frac{E^2}{2\eta}=\frac{H^2\eta}{2}
+		P=S*Area=\frac{EH}{2}*Area=\frac{E^2}{2\eta}*Area=\frac{H^2\eta}{2}*Area
 		\label{eq:potenza-propagante}
 		\end{equation}
 	
@@ -966,6 +1155,15 @@ d'=\frac{R^2}{d}
 				 \]
 
 
+        \newpage
+        \null 
+        \thispagestyle{empty} 
+        \newpage
+        
+        \newpage
+        \null 
+        \thispagestyle{empty} 
+        \newpage
 
 
 

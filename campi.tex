@@ -7,7 +7,7 @@
 	\usepackage[italian]{babel}  
 	\usepackage[bookmarks=true]{hyperref}
 	\usepackage{bookmark}
-	\usepackage{esopic}
+	
 	
 	\geometry{letterpaper}	
 
@@ -24,7 +24,6 @@
 
 
 \begin{document}
-
 
 \begin{titlepage}
 
@@ -90,10 +89,11 @@
 	
 	\section{Conduttori cilindrici affiancati}
 
-		La tensione tra due conduttori cilindrici affiancati su cui è distribuita una densità di carica $\rho_l$ opposta risulta:
+		Il potenziale tra due conduttori cilindrici affiancati su cui è distribuita una densità di carica $\rho_l$ opposta risulta:
 
 		\begin{equation}
 		V=\frac{\rho_l}{2 \pi \epsilon_0}{ln(\frac{d^2}{R^+R^-})}
+		\label{eq:potenzialebifilari}
 		\end{equation}
 
 		La capacità risulta invece:
@@ -104,21 +104,22 @@
 
 	\section{Distribuzioni di carica lineare}
 
-		\subsection{Tensione dovuta a distribuzioni di carica lineari}
-
+		\subsection{Potenziale dovuto a distribuzioni di carica lineari}
+		E' possibile calcolare il potenziale in punto qualsiasi dello spazio come: 
 		\[
-		V=\frac{\rho}{2\pi \epsilon}ln(\frac{d_{punto_carica}}{d_{carica-origine}})
+		V=\frac{\rho}{2\pi \epsilon}ln(\frac{d_{punto-carica}}{d_{carica-origine}})
 		\]
+
 	\section{Cariche puntiformi}
 
-		Il potenziale in un punto P dello spazione generato da una carica puntiforme come risultato dell integrazione del campo coulombiano risulta:
+		Il potenziale in un punto P generato da un carica puntiforme, dato dall' integrazione del campo elettrico coulombiano, risulta:
 
 		\[
 		V(P)=\frac{Q}{4\pi \epsilon r}
 		\]
 		Dove:
 		\begin{itemize}
-		\item "Q" è la arica puntiforme
+		\item "Q" è la carica puntiforme.
 
 		\item "r" è la distanza del punto P\footnote{In cui calcoliamo il potenziale} dalla carica.
 		\end{itemize}
@@ -143,11 +144,12 @@ Per annulare il potenziale su una sfera all esterno della quale è posta una car
 d'=\frac{R^2}{d}
 \]
 
+Analogamente viene trattato il caso di conduttori cilindrici con distribuzioni di carica lineari.
 
 \chapter{Sorgenti di campo magnetico}
 
 	\section{Spira}
-			Il campo magnetico generato da una spira circolare nella direzione assiale\footnote{z} è:
+			Il campo magnetico generato da una spira circolare nella direzione assiale\footnote{Asse z} è:
 
 			\begin{equation}
 			B=\frac{\mu IR^2}{2(z^2+R^2)^{\frac{3}{2}}}
@@ -158,7 +160,7 @@ d'=\frac{R^2}{d}
 		\[
 		f.e.m.=Area* \mu \frac{dH}{dt} cos(\theta) 
 		\]
-
+		Dove $\theta$ è l'angolo compreso tra la direzione del campo magnetico e il vettore normale alla spira.
 	\section{Solenoide}
 		\subsection{Campo magnetico in un solenoide}
 			Il campo magnetico al centro di un solenoide\footnote{Assumento il solenoide riempito con un materiale con permeabilità magnetica relativa $\mu_r$} è:
@@ -207,7 +209,7 @@ d'=\frac{R^2}{d}
 		\subsection{Linee Bifilari}
 
 			Utilizzando l'approssimazione dei conduttori sottili si può scrivere che la capacità per unità di lunghezza è data dal rapporto fra la carica per unità di lunghezza e la 
-			differenza di potenziale tra i due fili.
+			differenza di potenziale tra i due fili\footnote{vedi la ~\ref{eq:potenzialebifilari}}.
 			
 
 			\begin{equation}
@@ -221,14 +223,14 @@ d'=\frac{R^2}{d}
 
 	
 
-	 		Se la linea è costituita da tratti riempiti con dielettrico di diversa natura, la linea puo essere modellizzata come tre capacità in parallelo calcolate come:
+	 		Se la linea è costituita da tratti riempiti con dielettrico di diversa natura, la linea può essere modellizzata come più capacità in parallelo calcolate come:
 
 	 		\begin{equation}
 			C=\epsilon_0 \epsilon_r\frac{w}{h}	 			
 	 		\end{equation} 
 	 		dove:
 	 		\begin{itemize}
-	 		\item $w$ è la lunghezza del settore di linea considerato
+	 		\item $w$ è la lunghezza del settore di linea considerato.
 	 		\item $h$ è la distanza tra le strisce
 	 		\end{itemize}
 
@@ -285,15 +287,15 @@ d'=\frac{R^2}{d}
 
 		\subsection{Linee Coassiali}
 
-			La reistenza per unità di lunghezza si calcola come:
+			La resistenza per unità di lunghezza si calcola come:
 
 			\begin{equation}R=\frac{1}{\sigma \delta p}=\frac{1}{\sigma \delta 2 \pi}(\frac{1}{r_{out}}+\frac{1}{r_{in}})\end{equation}
 			dove:
 			
 			\begin{itemize}
-			\item $\sigma$ è la conducibilità del conduttore
-			\item $\delta$ è lo spessore pelle
-			\item $p$ è il perimetro della sezione nel conduttore interessata dal passaggio di corrente
+			\item $\sigma$ è la conducibilità del conduttore.
+			\item $\delta$ è lo spessore pelle.
+			\item $p$ è il perimetro della sezione nel conduttore interessata dal passaggio di corrente.
 			\end{itemize}
 
 		\subsection{Linee bifilari}
@@ -311,7 +313,7 @@ d'=\frac{R^2}{d}
 
 		\subsection{Microstrisce}
 
-			Analogamente ai casi precedenti si calcola le resistenza considerando il solo spessore di conduttore ricavato con lo spessore pelle e la larghezza della microstriscia.\footnote{Il calcolo è quindi analogo alla linea coassiale sostiuendo il perimetro con la larghezza della microstriscia}
+			Analogamente ai casi precedenti si calcola le resistenza considerando il solo spessore di conduttore ricavato con lo spessore pelle e la larghezza della microstriscia.\footnote{Il calcolo è quindi analogo alla linea coassiale sostiuendo il perimetro con la larghezza della microstriscia.}
 
 	\section{Conduttanza per unità di lunghezza}
 
@@ -333,7 +335,7 @@ d'=\frac{R^2}{d}
 		
 	\section{Costante di attenuazione dovuta al dielettrico}
 	
-			L'attenuazione dovuta alle perdite\footnote{per unità di lunghezza} nel dielettrico è dovuta ad una conducibiltà non nulla di materiali non ideali.
+			L'attenuazione dovuta alle perdite\footnote{per unità di lunghezza.} nel dielettrico è conseguenza di una conducibiltà non nulla di materiali non ideali.
 
 			\begin{equation}
 			\alpha_d=\frac{g}{2Y_c}
@@ -347,7 +349,7 @@ d'=\frac{R^2}{d}
 			Dove:
 			\begin{itemize}
 			\item L è la lunghezza totale della linea.
-			\item $\alpha=\alpha_d+\alpha_c$ è òa costante di attenuazione totale che tiene conto sia delle perdite nel dielettrico che nei conduttori.
+			\item $\alpha=\alpha_d+\alpha_c$ è la costante di attenuazione totale che tiene conto sia delle perdite nel dielettrico che nei conduttori.
 			\end{itemize}
 
 	\section{Conversione Np-dB}
@@ -380,10 +382,6 @@ d'=\frac{R^2}{d}
 			2 \pi a |H_{max}| = |I_{max}|
 			\end{equation}
 
-
-	\section{Campo elettrico massimo}
-
-
 	\section{Costante di fase}
 			%		    \subsection{Microstrisce}
 			\begin{equation}
@@ -402,7 +400,7 @@ d'=\frac{R^2}{d}
 
 		Dove $\eta_0=377\Omega$ è l'impedenza caratteristica del vuoto.
 
-		Se il dielettrico prensenta una conducibilità equivalente non nulla l'impedenza instrinseca risulta:
+		Se il dielettrico presenta una conducibilità equivalente non nulla l'impedenza instrinseca risulta:
 
 		\begin{equation}
 		\eta=\frac{j\omega\mu}{\sqrt{-\omega^2\mu\epsilon+j\omega\mu\sigma_{eq}}} [  \Omega  ]
@@ -414,7 +412,7 @@ d'=\frac{R^2}{d}
 		\end{equation}
 		Risulta $\epsilon=\epsilon'+j\epsilon''$.
 		
-		I coefficienti $\epsilon'$ e $\epsilon''$ vengono dati tramite il parametro $tan\delta=\frac{\epsilon''}{\epsilon'}$.
+		I coefficienti $\epsilon'$ e $\epsilon''$ vengono dati tramite il parametro\footnote{In cui si ricorda che la $\delta$ non ha nulla a che fare con lo spessore pelle.} $tan\delta=\frac{\epsilon''}{\epsilon'}$.
 
 	\section{Lunghezza d'onda in mezzi dielettrici}
 		Una radiazione che si propoaga in un mezzo con constante dielettrica diversa da quella del vuoto subisce una variazione della lunghezza d'onda:
@@ -426,7 +424,7 @@ d'=\frac{R^2}{d}
 	\section{Equivalente in linea di trasmissione}
 
 		
-		La propagazione in un mezzo multistrato come nella può essere modellizata come una linea di trasmissione in cui i vari spezzoni di linea hanno impedenza caratteristica uguale a quella del mezzo in cui si propagano.	
+		La propagazione in un mezzo multistrato può essere modellizata come una linea di trasmissione in cui i vari spezzoni di linea hanno impedenza caratteristica uguale all'impedenza intrinseca del mezzo in cui si propagano.	
 		Si puo quindi studiare il problema con l'utilizzo della carta di Smith.
 
 	\section{Condizioni al contorno per il campo elettrico}
@@ -446,12 +444,12 @@ d'=\frac{R^2}{d}
 		\]
 
 	\section{Condizioni al contorno per il campo magnetico}
-		Nell interfaccia tra mezzi con permeabilità magnetica diversa:
+		Nell'interfaccia tra mezzi con permeabilità magnetica diversa si ha:
 		\begin{equation}
 		B_{n1}=B_{n2} 
 		\end{equation}
 		cioé $\mu_1 H_{n1} = \mu_2 H_{n2}$.
-		Mentre si conserva la componente tangenziale\footnote{Assumendo nulla la densità superficiale di corrente all'intefaccia. Tenendone conto risulta: $J_s=H_{t1}-H_{t2}$}.
+		Mentre si conserva la componente tangenziale\footnote{Assumendo nulla la densità superficiale di corrente all'intefaccia. Tenendone conto risulterebbe: $J_s=H_{t1}-H_{t2}$}.
 		\begin{equation}
 		H_{t1}=H_{t2}
 		\end{equation}
@@ -470,7 +468,7 @@ d'=\frac{R^2}{d}
 		\overline{S_{avg}}=\frac{A^2}{2\eta}
 		\end{equation}
 		Dove A è l'ampiezza del campo elettrico.
-		E' possibile calcolare anche il valore instantaneo che risulta:
+		E' possibile calcolare anche il valore istantaneo che risulta:
 
 		\begin{equation}
 		S_{ist}=\frac{A^2}{\eta}\cos^2(\omega t)
@@ -483,10 +481,10 @@ d'=\frac{R^2}{d}
 
 \chapter{Incidenza obliqua}
 
-	Avendo una radiazione incidente con angolo ubliquo su un intefaccia tra dielettrici diversi per studiare la trasmissione nel mezzo 2 è necessario scomporre la radiazione in propagazione trasverso elettrica e trasverso magnetica.
+	Avendo una radiazione incidente con angolo obliquo su un intefaccia tra dielettrici diversi per studiare la trasmissione nel mezzo 2 è necessario scomporre la radiazione in propagazione trasverso elettrica e trasverso magnetica.
 
 	\section{Angolo di trasmissione}
-
+	Si ricava , utilizzando la legge di Snell:
 	\begin{equation}
 	\theta_T=\arcsin(\frac{\sqrt{\epsilon_{r1}}}{\sqrt{\epsilon_{r2}}}\sin(\theta_i)
 	\end{equation} 
@@ -494,14 +492,18 @@ d'=\frac{R^2}{d}
 	\section{Condizioni limite}
 
 		\subsection{T.I.R.}
-			La condizione trasmissione totale interna implica un coefficiente di riflessione $\Gamma$ unitario.
+			La condizione di trasmissione totale interna implica un coefficiente di riflessione $\Gamma$ unitario.
 
 			\textbf{NOTA:}
 
-			Si ricordi che in caso si TIR il fatto che non ci sia potenza trasmessa nel mezzo 2 non implica il fatto che campi siamo nulli.
+			Si ricordi che in caso si TIR il fatto che non ci sia potenza trasmessa nel mezzo 2 non implica il fatto che i campi siamo nulli.
 			L'intensità dei campi nel mezzo 2 possono essere calcolati attraverso la valutazione dell'onda evanescente:
+
+
 		
 		\subsection{Angolo di Brewster}
+
+			Nel caso di angolo di incidenza uguale all'angolo di Brewster\footnote{Vedi la ~\ref{eq:brewster}} abbiamo trasmissione totale nel mezzo 2, cioe $\Gamma=0$.
 
 	\section{Modo trasverso elettrico}
 
@@ -516,7 +518,7 @@ d'=\frac{R^2}{d}
 			\[
 			\Gamma_{TE}=\frac{\eta_{TE1}-\eta_{TE2}}{\eta_{TE1}+\eta_{TE2}}
 			\]
-			 Si noti che questo coefficiente di riflessione è valido solo per la componente normale del campo elettrica.
+		%	 Si noti che questo coefficiente di riflessione è valido solo per la componente tangente del campo elettrico.
 
 			 \textbf{NOTA:}
 			 \\ 
@@ -567,7 +569,7 @@ d'=\frac{R^2}{d}
 		
 			\textbf{NOTA:}
 
-			Si ricordi che studiando il modo trasverso elettrico il coefficiente di riflessione va applicato alla sola componente tangente del campo elettrico\footnote{Unica presente in modo TE}.
+			Si ricordi che studiando il modo trasverso elettrico il coefficiente di riflessione va applicato alla sola componente tangente del campo elettrico\footnote{Unica presente in modo TE.}.
 			
 	\section{Modo trasverso magnetico}
 
@@ -588,10 +590,10 @@ d'=\frac{R^2}{d}
 			\[
 			\Gamma_{TM}=\frac{\eta_{TM1}-\eta_{TM2}}{\eta_{TM1}+\eta_{TM2}}
 			\]
-			 Si noti che questo coefficiente di riflessione è valido solo per la componente normale del campo elettrica.
-			 \\
-			 \textbf{NOTA:}
-			 \\ 
+		
+			 
+			 \textbf{ NOTA: }
+			 
 			 Nello studio della propagazione di modi trasverso elettrici il coefficiente di trasmissione $\Gamma_{TM}$ si può utilizzare solo per il calcolo del campo magnetico e non del campo elettrico , il quale si potrà poi essere calcolato utilizzando la ~\ref{eq:campo-elettrico}.
 
 		\subsection{Potenza trasmessa}
@@ -635,7 +637,7 @@ d'=\frac{R^2}{d}
 			\gamma_y=\gamma\cos(\theta)
 			\]
 
-			E' quindi possibile esprimere il campo magnetico propagante\footnote{Valido sia per modi TE che TM} nel mezzo come:
+			E' quindi possibile esprimere il campo magnetico propagante\footnote{Valido sia per modi TE che TM.} nel mezzo come:
 			
 			\[
 			H(x,y)=H(0,0)e^-{j\gamma_x x}e^-{j\gamma_y y}
@@ -644,7 +646,7 @@ d'=\frac{R^2}{d}
 
 		\section{Onde incidenti generiche}
 
-		In presenza di un onda non solamente TM o TE si studiano i due tipi di modi separatamente e si compongono alla fine con la somma quadratica\footnote{Ciò vale sia per le potenze che per i campi}:
+		In presenza di un onda non solamente TM o TE si studiano i due tipi di modi separatamente e si compongono alla fine con la somma quadratica\footnote{Ciò vale sia per le potenze che per i campi.}:
 
 		\[
 		S_{t}=\sqrt{S_{t_{TE}}^2 +S_{t_{TM}}^2 }
@@ -658,7 +660,7 @@ d'=\frac{R^2}{d}
 
 	\section{Adattatore lambda quarti}
 		
-		L'adattatore adattatore lambda quarti è un tratto di linea con impedenza caratteristica e lunghezza da dimensionare che viene inserito per adattare il carico alla linea.
+		L'adattatore lambda quarti è un tratto di linea con impedenza caratteristica e lunghezza da dimensionare opportunamente che viene inserito per adattare il carico alla linea.
 
 		\subsection{Impedenza caratteristica}
 				Muovendosi sulla carta di smith è necessario trovare le impedenze viste ad entrambe le interfacce dell'adattore.
@@ -668,27 +670,27 @@ d'=\frac{R^2}{d}
 				\end{equation}
 
 		\subsection{Lunghezza della linea}
-				Imponendo le condizioni di interferenza distruttiva tra le onde riflesse alle 2 interfaccie si trova che la lunghezza del tratto di linea da inserire deve essere un quarto della lunghezza d'onda normalizzata all'impedenza caratteristica determinata.
+				Imponendo le condizioni di interferenza distruttiva tra le onde riflesse alle 2 interfaccie si trova che la lunghezza del tratto di linea da inserire deve essere un quarto della lunghezza d'onda:\footnote{Eventualmente da modificare a seconda della costante dielettrica del mezzo in caso di linea equivalente ad un multistrato.}
 				\begin{equation}
-				L_s=\frac{\lambda_0}{4\eta_{\frac{\lambda}{4}}}
+				L_s= \frac {\lambda} {4}
 				\end{equation}
 
 	\section{Stub parallelo}
 
-		Dimendionando l'adattamento con stub parallelo è necessario lavorare con la carta delle ammettenze\footnote{Si ricordi che nella carta delle ammettenze il corto circuito si trova a destra}, ogni impedenza $Z$ va quindi trasformata in ammettenza come: $Y=\frac{1}{Z}$
+		Dimensionando l'adattamento con stub parallelo è necessario lavorare con la carta delle ammettenze\footnote{Si ricordi che nella carta delle ammettenze il corto circuito si trova a destra.}, ogni impedenza $Z$ va quindi trasformata in ammettenza come: $Y=\frac{1}{Z}$
 
 		\subsection{Corto circuito}
 				
+			Per l'adattamento con stub parallelo si trova l'ammettenza del carico $Y_L=\frac{1}{Z_L}$ e la si normalizza per l'ammettenza caratteristica del tratto di linea attraverso cui ci si sta muovendo: $\overline{Y_{LL}}=\frac{Y_L}{Y_O}$.
 
-			Per l'adattamento con stub parallelo trovala l'ammettenza del carico $Y_L=\frac{1}{Z_L}$ la normalizzo per l'ammettenza caratteristica del tratto di linea attraverso cui mi sto muovendo  $Y_0=\frac{1}{Z_0}$ verso il generatore come: $Y_{\overline{LL}}=\frac{Y_L}{Y_O}$.
 
-			A questo punto riportando $Y_{\overline{LL}}$ sulla carta delle ammetenze , ruoto fino ad individuale i punti di intersezione con la circonferenza unitaria
+			A questo punto riportando $\overline{Y_{LL}}$ sulla carta delle ammetenze , ruoto fino ad individuale i punti di intersezione con la circonferenza unitaria
 
-			Indivuduata la parte immaginaria dell'impedenza , partendo dal corto circuito ruoto sulla circonferenza esterna della carta di smith\footnote{circonferenza a parte reale} ruoto fino al punto a parte immaginaria opposta rispetto a quella dell'impedenza dovuta al carico e determino cosi la lunghezza dello stub.
+			Indivuduata la parte immaginaria dell'impedenza , partendo dal corto circuito ruoto sulla circonferenza esterna della carta di smith\footnote{Circonferenza a parte reale.} ruoto fino al punto a parte immaginaria opposta rispetto a quella dell'impedenza dovuta al carico e determino cosi la lunghezza dello stub.
 
 		\subsection{Circuito aperto}
 
-		Il procedimento per il dimensionamento di stub parallelo a circuito aperto è analogo a quello utilizzoìato per lo stub parallelo a corto circuito con l'unica differenza che nel detrminare la lunghezza dello stesso la rotazione sulla carta si Smith deve partire dal punto ad impedenza infinita, cioè ammettenza nulla.
+		Il procedimento per il dimensionamento di stub parallelo a circuito aperto è analogo a quello utilizzato per lo stub parallelo a corto circuito con l'unica differenza che nel determinare la lunghezza dello stesso la rotazione sulla carta di Smith deve partire dal punto ad impedenza infinita, cioè ammettenza nulla\footnote{Al contrario del procedimento adottato per gli stub corto circuito.}.
 
 	\textbf{NOTA:}
 
@@ -697,14 +699,14 @@ d'=\frac{R^2}{d}
 	
 	\section{Stub serie}
 
-	 	Il metodo di dimensionamento degli stub serie è duale a quello per gli stub parallelo. E' però necessario unsare la carta di Smith delle impedenze, sommando queste tra loro.
+	 	Il metodo di dimensionamento degli stub serie è duale a quello per gli stub parallelo. E' però necessario usare la carta di Smith delle impedenze, sommando queste tra loro.
 
 		
 	\section{Adattamento con carico reattivo}
 
-		Analogamente a quanto visto per gli adattatori a neutralizzazione e stub parallelo e serie, un altro metodo di adattamento del carico consiste nell'inserimento in linea di un carico reattivo\footnote{Capacità o induttanza}.
+		Analogamente a quanto visto per gli adattatori lambda-quarti e stub parallelo e serie, un altro metodo di adattamento del carico consiste nell'inserimento in linea di un carico reattivo\footnote{Capacità o induttanza.}.
 
-		Analogamente al discorso fatto per gli stub il carico reattivo puuò essere aggiunto in serie o in parallelo
+		Analogamente al discorso fatto per gli stub il carico reattivo puuò essere aggiunto in serie o in parallelo.
 
 		\subsection{Serie}
 			Con un approccio analogo a quello utilizzato per gli stub serie si lavora con la carta di Smith delle impedenze.
@@ -716,17 +718,15 @@ d'=\frac{R^2}{d}
 	Per trovare la tensione sul carico adattato si utilizza l'espressione:
 
 	\[
-	P_d= \frac {V_{load}^2}{2} Re[ Y_{load}] \}
+	P_d= \frac {V_{load}^2}{2} Re\{ Y_{load}] \}
 	\]
-	porchè tutta la potenza disponibile viene trasferita al carico.
+	Poichè tutta la potenza disponibile viene trasferita al carico.
 
 	Per trovare invece la corrente che fluisce nel carico si utilizza la legge di ohm:
 
 	\[
 	I=\frac{V}{|Z_{load}|}
 	\]
-
-
 
 \chapter{Propagazione in linea}
 
@@ -782,7 +782,7 @@ d'=\frac{R^2}{d}
 
 		Se in linea abbiamo delle perdite e conosciamo il coefficiente di attenuazione $\alpha$, sappiamo che la potenza si propaga come:
 		\begin{equation}
-		P(x)=e^{-\alpha}x
+		P(x)=P_0e^{-2 \alpha x}
 		\end{equation}
 
 		Si ricordi come in presenza di perdite in linea la potenza erogata risulta uguale alla somma della potenza dissipata lungo la linea e alla potenza trasferita al carico:
@@ -804,7 +804,7 @@ d'=\frac{R^2}{d}
 		\[
 		\Gamma_L=\frac{Z_C-Z_L}{Z_C+Z_L}
 		\]
-		\subsection{Coefficiente di attenuazione attenuato}
+		\subsection{Coefficiente di riflessione attenuato}
 		Lungo la linea con perdite il coefficiente di riflessione viene attenuato come:
 		\[
 		\Gamma_{attenuato}=\Gamma_L e^{-2\alpha L}
@@ -812,13 +812,13 @@ d'=\frac{R^2}{d}
 		Riportando sulla carta di Smith il coefficiente di riflessione attenuato possiamo ottenere l'impedenza vista all'interfaccia di ingresso, da cui è possibile ricavare il coefficiente di riflessione in ingresso:
 
 		\[
-		\Gamma_{in}=\frac{Z_G-Z_{BB}}{Z_G+Z_{BB}}
+		\Gamma_{in}=\frac{Z_G-Z_{in}}{Z_G+Z_{in}}
 		\]
 
 		Da cui conoscendo la potenza incidente possiamo ricavare la potenza immessa in linea come:
 
 		\[
-		P_{in}=P_d(1-|\Gamma|^2)
+		P_{in}=P_d(1-|\Gamma_{in}|^2)
 		\]
 
 		\subsection{Tensione all'interfaccia di ingresso}
@@ -844,7 +844,7 @@ d'=\frac{R^2}{d}
 		\subsection{Campo magnetico}
 
 				\begin{equation}
-				H_{max}=H^+(1+\Gamma)=\frac{E+}{\eta_{TE_{10}}}{(1+|\Gamma|)}
+				H_{max}=H^+(1+|\Gamma|)=\frac{E^+_{max}}{\eta_{TE_{10}}}{(1+|\Gamma|)}
 				\end{equation}
 
 		\subsection{Frequenza di work}
@@ -853,7 +853,7 @@ d'=\frac{R^2}{d}
 				f_w=\frac{\frac{c}{2a}+\frac{c}{2b}}{2}
 				\end{equation}
 
-				Si ricordi che questa relazione è valida solo nel caso in cui $b<a<2b$
+				Si ricordi che questa relazione è valida solo nel caso in cui $b<a<2b$.
 
 		\subsection{Frequenza di cut}
 	
@@ -868,12 +868,6 @@ d'=\frac{R^2}{d}
 			\begin{equation}
 			\lambda_{TE}=\frac{1}{\sqrt{\epsilon_r}}\frac{\lambda}{\sqrt{1- (\frac{f_c}{\sqrt{\epsilon_r}f_w})^2}}
 			\end{equation}
-			
-
-		\subsection{Frequenza in setto di dielettrico}
-
-
-
 
 		\subsection{Impedenza modale nel vuoto}
 
@@ -905,7 +899,8 @@ d'=\frac{R^2}{d}
 				\begin{equation}
 				P_0=\frac{E_0^2}{4\eta_{TE}}ab
 				\end{equation}
-				Si noti che nel caso di inserimento di un setto $\lambda/2$ in guida abbiamo un onda viaggiante , l'inviluppo del campo elettrico è quindi costante tranne nel setto di dielettrico in cui è simmetrico rispetto al punto medio , in questo caso $E_0$ coincide con $E_{max}$
+				Si noti che nel caso di inserimento di un setto $\lambda/2$ in guida abbiamo un onda viaggiante , l'inviluppo del campo elettrico è quindi costante tranne nel setto di dielettrico, in cui è simmetrico rispetto al punto medio.
+				Nel caso di $\frac{\lambda}{2}$ si ha che $E_0$ coincide con $E_{max}$.
 		
 
 \chapter{Propagazione di onde piane}
@@ -935,7 +930,7 @@ d'=\frac{R^2}{d}
 	
 	\subsection{Potenza dissipata}
 
-		La potenza dissipata si calcola in un mezzo si calcola come la differenza tra la potenza finale e quella iniziale.
+		La potenza dissipata in un mezzo si calcola come la differenza tra la potenza finale e quella iniziale.
 		\begin{equation}
 			P_{diss}=P_{finale}-P_{iniziale}
 			\label{eq:potenza-dissipata}
@@ -956,6 +951,7 @@ d'=\frac{R^2}{d}
 	L'angolo di Brewster è l'angolo di incidenza a cui abbiamo trasmissione totale:
 	\[
 	\sin(\theta_B)=\sqrt{\frac{\epsilon_2}{\epsilon_2+\epsilon_1}}
+	\label{eq:brewster}
 	\]
 
 
@@ -976,7 +972,7 @@ d'=\frac{R^2}{d}
 
 	Conoscendo le componenti x e y del campo elettrico è possibile individuale la polarizzazione dell'onda.
 
-	\raggedright	{1) Se i moduli della componente x e y sono diversi:}
+	\raggedright	{1) Se i moduli della componente x e y sono diversi\footnote{A meno che le due componenti non abbiamo sfasamento o nullo o uguale a $\pi$.}:}
 
 	\begin{itemize} 
 	\item \textbf{Polarizazzione ellittica}
@@ -1023,18 +1019,18 @@ d'=\frac{R^2}{d}
 
 
 \chapter{Antenne}
-		\textbf{Formula generale\footnote{Valida per tutti i tipi di antenne}}
+		\textbf{Formula generale\footnote{Valida per tutti i tipi di antenne.}}
 		\begin{equation}
 		\frac{G}{A_e}=\frac{4\pi}{\lambda^2}
 		\end{equation}
-	    Dove G è il guadagno che si calcola come $G=\mu D$\footnote{Dove $D=\frac{S_{reale}}{S_{isotropa}}$ è la direttività}.
+	    Dove G è il guadagno che si calcola come $G=\mu D$\footnote{Dove $D=\frac{S_{reale}}{S_{isotropa}}$ è la direttività.}.
 
 	    Il
 	 \section{Dipoli elettrici in trasmissione}
 
 		\subsection{Campo elettrico trasmesso}
 
-		Il campo elettrico radiale è un campo vicino che decade a distanze maggiori di $2\lambda$
+		Il campo elettrico radiale è un campo vicino che decade a distanze maggiori di $2\lambda$:
 		
 		\begin{equation}
 		E_r=\frac{I{l}}{2\pi}e^{-j\beta r}(\frac{ \eta_0}{R^2}+\frac{1}{j \omega \epsilon R^3})\cos(\theta)
@@ -1109,16 +1105,6 @@ d'=\frac{R^2}{d}
 				\begin{equation}
 				V_0=E_{inc}l_e
 				\end{equation}
-
-
-
-			
-
-		\section{Dipoli magnetici}
-			
-			\subsection{Campo elettrico trasmesso}
-
-			\subsection{Campo magnetico trasmesso}
 
 		\section{Spira}
 

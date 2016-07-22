@@ -44,7 +44,7 @@
 	%{\Large\itshape Edoardo Contini\par}
 	\vfill
     \raggedleft{Professore: \\ \textit{Michele D'Amico}}	
-    \\[1cm]
+    \\begin{equation}1cm]
 	
 	\raggedright
     {Studente:\\ \textit{Edoardo Contini}
@@ -60,13 +60,12 @@
 
 %\author{Edoardo Contini}
 
-
         \newpage
         \null 
         \thispagestyle{empty} 
-        \newpage
-        
+        \newpage     
 %\maketitle
+\setcounter{page}{0}
 \tableofcontents
 		\newpage
         \null 
@@ -104,17 +103,17 @@
 
 		\subsection{Potenziale dovuto a distribuzioni di carica lineari}
 		E' possibile calcolare il potenziale in punto qualsiasi dello spazio come: 
-		\[
+		\begin{equation}
 		V=\frac{\rho}{2\pi \epsilon}ln(\frac{d_{punto-carica}}{d_{carica-origine}})
-		\]
+		\end{equation}
 
 	\section{Cariche puntiformi}
 
 		Il potenziale in un punto P generato da un carica puntiforme, dato dall' integrazione del campo elettrico coulombiano, risulta:
 
-		\[
+		\begin{equation}
 		V(P)=\frac{Q}{4\pi \epsilon r}
-		\]
+		\end{equation}
 		Dove:
 		\begin{itemize}
 		\item "Q" è la carica puntiforme.
@@ -138,9 +137,9 @@
 
 	Per annulare il potenziale su una sfera all esterno della quale è posta una carica devo porre una carica immagine a distanza $d'$ dal centro lungo la congiungente tra il centro e la carica esterna tali che:
 
-	\[
+	\begin{equation}
 	d'=\frac{R^2}{d}
-	\]
+	\end{equation}
 
 	Analogamente viene trattato il caso di conduttori cilindrici con distribuzioni di carica lineari.
 
@@ -155,9 +154,9 @@
 
 		\subsection{Legge di Faraday-Neumann-Lenz}
 
-		\[
+		\begin{equation}
 		f.e.m.=Area* \mu \frac{dH}{dt} cos(\theta) 
-		\]
+		\end{equation}
 		Dove $\theta$ è l'angolo compreso tra la direzione del campo magnetico e il vettore normale alla spira.
 	\section{Solenoide}
 		\subsection{Campo magnetico in un solenoide}
@@ -352,9 +351,9 @@
 
 	\section{Conversione Np-dB}
 
-	\[
+	\begin{equation}
 	1\frac{Np}{m}=8,868\frac{dB}{km}
-	\]
+	\end{equation}
 	
 	\section{Potenza associata all'onda progressiva}
 
@@ -427,7 +426,7 @@
 
 	\section{Condizioni al contorno per il campo elettrico}
 
-		Nell interfaccia tra mezzi con costante dielettrica diversa abbiamo che:
+		Nell'interfaccia tra mezzi con costante dielettrica diversa abbiamo che:
 		\begin{equation}
 		E_{t1}=E_{t2} 
 		\end{equation}
@@ -437,9 +436,9 @@
 		D_{n1} = D_{n2}
 		\end{equation}
 		cioè:
-		\[
-		\frac{E_{n1}}{\epsilon_1}=\frac{E_{n2}}{\epsilon_2}
-		\]
+		\begin{equation}
+		E_{n1}\epsilon_1=E_{n2}\epsilon_2
+		\end{equation}
 
 	\section{Condizioni al contorno per il campo magnetico}
 		Nell'interfaccia tra mezzi con permeabilità magnetica diversa si ha:
@@ -456,9 +455,9 @@
 
 	Conoscendo la densità di potenza propagante possiamo calcolare il modulo di campo elettrico e magnetico come:
 
-	\[
+	\begin{equation}
 	S=\frac{E^2}{2\eta_{mezzo}}=\frac{H^2}{2}\eta_{mezzo}
-	\]
+	\end{equation}
 
 	\section{Vettore di Poynting}
 		Per una radiazione propagante in un mezzo possiamo calcolare il valore medio del vettore di Poynting come:
@@ -476,15 +475,23 @@
 
 	La legge di snell viene utilizzata per studiare il caso semplificato di impedenza normale.
 
-
 \chapter{Incidenza obliqua}
 
 	Avendo una radiazione incidente con angolo obliquo su un intefaccia tra dielettrici diversi per studiare la trasmissione nel mezzo 2 è necessario scomporre la radiazione in propagazione trasverso elettrica e trasverso magnetica.
+
+	\section{Angolo di incidenza}
+
+		\begin{equation}
+		\theta=arctan(\frac{E_z}{E_x})
+		\end{equation}
+
+
 
 	\section{Angolo di trasmissione}
 	Si ricava , utilizzando la legge di Snell:
 	\begin{equation}
 	\theta_T=\arcsin(\frac{\sqrt{\epsilon_{r1}}}{\sqrt{\epsilon_{r2}}}\sin(\theta_i)
+	\label{eq:leggedisnell}
 	\end{equation} 
 	
 	\section{Condizioni limite}
@@ -498,7 +505,19 @@
 			L'intensità dei campi nel mezzo 2 possono essere calcolati attraverso la valutazione dell'onda evanescente:
 
 
+		\begin{equation}
+		|E|=E_0 e^{-2 \alpha x}
+		\end{equation}
+
+		con:
+
+		\begin{equation}
+		\alpha= \frac{2 \pi}{\lambda}\sqrt{1-\sin^2(\theta_t)}
+		\end{equation}
 		
+		Si ricordi che non è possibile calcola l'angolo $\theta_t$ in quanto siamo in condizione di riflessione totale è pero possibile calcolarne il seno tramite la legge di Snell.
+
+
 		\subsection{Angolo di Brewster}
 
 			Nel caso di angolo di incidenza uguale all'angolo di Brewster\footnote{Vedi la ~\ref{eq:brewster}} abbiamo trasmissione totale nel mezzo 2, cioe $\Gamma=0$.
@@ -513,9 +532,9 @@
 		\subsection{Coefficiente di riflessione}
 			Conoscendo le impedenze intrinseche posso calcolare il coefficiente di riflessione per il modo TE come:
 
-			\[
-			\Gamma_{TE}=\frac{\eta_{TE1}-\eta_{TE2}}{\eta_{TE1}+\eta_{TE2}}
-			\]
+			\begin{equation}
+			\Gamma_{TE}=\frac{\eta_{TE2}-\eta_{TE1}}{\eta_{TE1}+\eta_{TE2}}
+			\end{equation}
 		%	 Si noti che questo coefficiente di riflessione è valido solo per la componente tangente del campo elettrico.
 
 			 \textbf{NOTA:}
@@ -546,24 +565,24 @@
 		\subsection{Campo elettrico}
 
 			Per valutare il campo elettrico in un punto dello spazio devo valutare diversi coefficienti di propagazione:
-			\[
-			\gamma=j\omega\sqrt{\mu\epsilon}\]
+			\begin{equation}
+			\gamma=j\omega\sqrt{\mu\epsilon}\end{equation}
 
 			Da cui ricavo le due componenti:
 
-			\[
+			\begin{equation}
 			\gamma_x=\gamma\sin(\theta)
-			\]
+			\end{equation}
 
-			\[
+			\begin{equation}
 			\gamma_y=\gamma\cos(\theta)
-			\]
+			\end{equation}
 
 			E' quindi possibile esprimere il campo elettrico propagante\footnote{Valido sia per modi TE che TM} nel mezzo come:
 			
-			\[
+			\begin{equation}
 			E(x,y)=E(0,0)e^-{j\gamma_x x}e^-{j\gamma_y y}
-			\]
+			\end{equation}
 		
 			\textbf{NOTA:}
 
@@ -585,9 +604,9 @@
 		\subsection{Coefficiente di riflessione}
 			Conoscendo le impedenze intrinseche posso calcolare il coefficiente di riflessione per il modo TM come:
 
-			\[
-			\Gamma_{TM}=\frac{\eta_{TM1}-\eta_{TM2}}{\eta_{TM1}+\eta_{TM2}}
-			\]
+			\begin{equation}
+			\Gamma_{TM}=\frac{\eta_{TM2}-\eta_{TM1}}{\eta_{TM1}+\eta_{TM2}}
+			\end{equation}
 		
 			 
 			 \textbf{ NOTA: }
@@ -622,33 +641,33 @@
 		\subsection{Campo magnetico}
 
 			Per valutare il campo magnetico in un punto dello spazio devo valutare diversi coefficienti di propagazione:
-			\[
-			\gamma=j\omega\sqrt{\mu\epsilon}\]
+			\begin{equation}
+			\gamma=j\omega\sqrt{\mu\epsilon}\end{equation}
 
 			Da cui ricavo le due componenti:
 
-			\[
+			\begin{equation}
 			\gamma_x=\gamma\sin(\theta)
-			\]
+			\end{equation}
 
-			\[
+			\begin{equation}
 			\gamma_y=\gamma\cos(\theta)
-			\]
+			\end{equation}
 
 			E' quindi possibile esprimere il campo magnetico propagante\footnote{Valido sia per modi TE che TM.} nel mezzo come:
 			
-			\[
+			\begin{equation}
 			H(x,y)=H(0,0)e^-{j\gamma_x x}e^-{j\gamma_y y}
-			\]
+			\end{equation}
 		
 
 		\section{Onde incidenti generiche}
 
 		In presenza di un onda non solamente TM o TE si studiano i due tipi di modi separatamente e si compongono alla fine con la somma quadratica\footnote{Ciò vale sia per le potenze che per i campi.}:
 
-		\[
+		\begin{equation}
 		S_{t}=\sqrt{S_{t_{TE}}^2 +S_{t_{TM}}^2 }
-		\]
+		\end{equation}
 
 \chapter{Adattamento}
 
@@ -690,6 +709,25 @@
 
 		Il procedimento per il dimensionamento di stub parallelo a circuito aperto è analogo a quello utilizzato per lo stub parallelo a corto circuito con l'unica differenza che nel determinare la lunghezza dello stesso la rotazione sulla carta di Smith deve partire dal punto ad impedenza infinita, cioè ammettenza nulla\footnote{Al contrario del procedimento adottato per gli stub corto circuito.}.
 
+
+
+		\subsection{Doppio stub parallelo}
+
+			\begin{itemize}
+			
+			\item Normalizzo il carico all'impedenza caratteristica della linea e ne faccio l'ammettenza.
+			\item Utilizzando la carta di Smith\footnote{Delle ammettenza} e conoscendo la lunghezza del tratto di linea trovo l'ammettenza vista a monte del primo stub.  
+			\item Partendo dal generatore so che, dovendo adattare la linea, l'ammettenza dovrà essere unitaria, a cui viene sommato lo stub\footnote{Ammettenza puramente reattiva} e quindi l'ammettenza a valle del secondo stub sarà sul cerchio a parte reale unitaria.  
+			\item A questo punto, sempre utilizzando la carta di Smith e conoscendo la lunghezza del tratto di linea che separa i due stub ruoto tutto il cerchio a parte unitaria.
+			\item Ora, partendo dal punto corrispondente all'ammettenza a monte del primo stub, ruoto a parte reale costante fino ad incontrare il cerchio precedentemente ruotato.
+			\item Si trova quindi l'ammettenza dello stub come differenza tra la parte immaginaria dell'ammettenza trovata sul cerchio ruotato e dell'ammettenza a monte del primo stub. 
+			\item Per ricavare quindi la lunghezza dello stub si denormalizza l'ammettenza trovata (con l'impedenza caratteristica della linea) e la si rinormalizza all'impedenza caratteristica del tratto di stub. A questo punto si trova sulla carta di Smith la frazione di lambda da imporre per avere l'ammettenza desiderata.  
+			\item Si ruota ora il punto intersecato sul cerchio ruotato, sul cerchio a parte reale unitaria.
+			\item L'ammettenza dello stub sarà quindi l'opposto dell'ammettenza appena trovata sul cerchio unitario.
+			\item Si può quindi trovare la lunghezza dello stub con un procedimento analogo a quello utilizzato per l'altro stub.
+			
+			\end{itemize}
+
 	\textbf{NOTA:}
 
 	Si ricordi che sarebbe possibile utilizzare anche la carta di Smith delle impedenze per trattare stub parallelo, bisognerebbe però avere l'accortezza di comporre le impedenze in parallelo, non in sommandole in serie come è possbile fare con le ammettenze.
@@ -699,7 +737,23 @@
 
 	 	Il metodo di dimensionamento degli stub serie è duale a quello per gli stub parallelo. E' però necessario usare la carta di Smith delle impedenze, sommando queste tra loro.
 
-		
+		\subsection{Doppio stub serie}
+
+			\begin{itemize}
+
+			\item Normalizzo il carico all'impedenza caratteristica della linea.
+			\item Utilizzando la carta di Smith\footnote{Delle impedenze} e conoscendo la lunghezza del tratto di linea trovo l'impedenza vista a monte del primo stub.  
+			\item Partendo dal generatore , so che dovendo adattare la linea l'impedenza dovrà essere unitaria , a cui viene sommato lo stub\footnote{Impedenza puramente reattiva} e quindi l'impedenza a valle del secondo stub sarà sul cerchio a parte reale unitaria.  
+			\item A questo punto, sempre utilizzando la carta di Smith e conoscendo la lunghezza del tratto di linea che separa i due stub ruoto tutto il cerchio a parte unitaria.
+			\item A questo punto, partendo dal punto corrispondente all'impedenza a monte del primo stub, ruoto a parte reale costante fino ad incontrare il cerchio precedentemente ruotato.
+			\item Si trova quindi l'impedenza dello stub come differenza tra la parte immaginaria dell'impedenza trovata sul cerchio ruotato e dell'impedenza a monte del primo stub. 
+			\item Per ricavare quindi la lunghezza dello stub si denormalizza l'impedenza trovata (con l'impedenza caratteristica della linea) e la si rinormalizza all'impedenza caratteristica del tratto di stub. A questo punto si trova sulla carta di Smith la frazione di lambda da imporre per avere l'impedenza desiderata.  
+			\item Si ruota ora il punto intersecato sul cerchio ruotato, sul cerchio a parte reale unitaria.
+			\item L'impedenza dello stub sarà quindi l'opposto dell'impedenza appena trovata sul cerchio unitario.
+			\item Si può quindi trovare la lunghezza dello stub con un procedimento analogo a quello utilizzato per l'altro stub.
+			
+			\end{itemize}
+
 	\section{Adattamento con carico reattivo}
 
 		Analogamente a quanto visto per gli adattatori lambda-quarti e stub parallelo e serie, un altro metodo di adattamento del carico consiste nell'inserimento in linea di un carico reattivo\footnote{Capacità o induttanza.}.
@@ -715,16 +769,16 @@
 
 	Per trovare la tensione sul carico adattato si utilizza l'espressione:
 
-	\[
+	\begin{equation}
 	P_d= \frac {V_{load}^2}{2} Re\{ Y_{load}] \}
-	\]
+	\end{equation}
 	Poichè tutta la potenza disponibile viene trasferita al carico.
 
 	Per trovare invece la corrente che fluisce nel carico si utilizza la legge di ohm:
 
-	\[
+	\begin{equation}
 	I=\frac{V}{|Z_{load}|}
-	\]
+	\end{equation}
 
 \chapter{Propagazione in linea}
 
@@ -769,9 +823,9 @@
 
 	Possiamo utilizzare la legge di Ohm per ricavare la corrente conoscendo la tensione o viceversa , utilizzando il modulo dell impedenza come segue:
 
-	\[
+	\begin{equation}
 	I_L=\frac{V_L}{|Z_L|}
-	\]
+	\end{equation}
 
 			Come per la \ref{eq:tensionealcarico} e la \ref{eq:correntealcarico} tale relazione può essere utilizzata in ogni punto della linea.
 
@@ -799,33 +853,36 @@
 
 		\subsection{Coefficiente di riflessione al carico}
 
-		\[
-		\Gamma_L=\frac{Z_C-Z_L}{Z_C+Z_L}
-		\]
+		\begin{equation}
+		\Gamma_L=\frac{Z_L-Z_C}{Z_C+Z_L}
+		\end{equation}
+
+
+
 		\subsection{Coefficiente di riflessione attenuato}
 		Lungo la linea con perdite il coefficiente di riflessione viene attenuato come:
-		\[
+		\begin{equation}
 		\Gamma_{attenuato}=\Gamma_L e^{-2\alpha L}
-		\]
+		\end{equation}
 		Riportando sulla carta di Smith il coefficiente di riflessione attenuato possiamo ottenere l'impedenza vista all'interfaccia di ingresso, da cui è possibile ricavare il coefficiente di riflessione in ingresso:
 
-		\[
-		\Gamma_{in}=\frac{Z_G-Z_{in}}{Z_G+Z_{in}}
-		\]
+		\begin{equation}
+		\Gamma_{in}=\frac{Z_{in}-Z_G}{Z_G+Z_{in}}
+		\end{equation}
 
 		Da cui conoscendo la potenza incidente possiamo ricavare la potenza immessa in linea come:
 
-		\[
+		\begin{equation}
 		P_{in}=P_d(1-|\Gamma_{in}|^2)
-		\]
+		\end{equation}
 
 		\subsection{Tensione all'interfaccia di ingresso}
 
 		Conoscendo l'impedenza di ingresso possiamo applicare un partitore di tensione come:
 
-		\[
+		\begin{equation}
 		V_{in}=V_g|\frac{Z_{in}}{Z_{in}+Z_g}|
-		\]
+		\end{equation}
 		\textbf{NOTA:}
 
 		Si faccia attenzione al fatto che trattando potenze propaganti in linea è necessario considerare solo le parti reali delle impedenze o delle ammettenze.
@@ -880,17 +937,17 @@
 
 		\subsection{Coefficiente di riflessione}
 
-			\[
+			\begin{equation}
 			\Gamma_{TE}=\frac{\eta_{TE_{vuoto}}-\eta_{TE_{setto}}}{\eta_{TE_{vuoto}}+\eta_{TE_{setto}}}
-			\]
+			\end{equation}
 		\subsection{Campo elettrico nel setto di dielettrico}
-		\[
+		\begin{equation}
 		E_{max}=E_g(1+|\Gamma|)
-		\]
+		\end{equation}
 
-		\[
+		\begin{equation}
 		E_{min}=E_g(1-|\Gamma|)
-		\]
+		\end{equation}
 
 
 		\subsection{Potenza in guida}
@@ -899,8 +956,31 @@
 				\end{equation}
 				Si noti che nel caso di inserimento di un setto $\lambda/2$ in guida abbiamo un onda viaggiante , l'inviluppo del campo elettrico è quindi costante tranne nel setto di dielettrico, in cui è simmetrico rispetto al punto medio.
 				Nel caso di $\frac{\lambda}{2}$ si ha che $E_0$ coincide con $E_{max}$.
-		
+	\section{Riflessione totale interna}
 
+		E' possibile che in guida si presenti la condizione di TIR, in particolare quando la frequenza di cut di un tratto di linea è inferiore alla frequaneza della radiazione incidente.
+
+		In tal caso possiamo calcolare i campi propaganti nel setto di dielettrico in cui non si propaga l'onda come:
+
+
+		\begin{equation}
+		|E|=|E_0 e^{-j\gamma x}|=E_0 e^{- 2 \alpha x}
+		\end{equation}
+
+
+		\begin{equation}
+		\alpha=\frac{2 \pi}{\lambda}\sqrt{1-(\frac{f_c}{f_w})^2}
+		\end{equation}
+
+
+		\textbf{NOTA:}
+
+		Si ricodi la definizione di impedenza intrinseca del mezzo come:
+
+
+		\begin{equation}
+		\eta_0 = \sqrt{\frac{\mu_0}{\epsilon_0}} 
+		\end{equation}
 \chapter{Propagazione di onde piane}
 
 	\subsection{Campo elettrico}
@@ -935,22 +1015,22 @@
 		\end{equation}
 	
 	\subsection{Costante di propagazione d'onda}
-		\[
+		\begin{equation}
 		\gamma=\sqrt{j\omega\mu(\sigma+j\omega\epsilon_0\epsilon_r)}
-		\]
+		\end{equation}
 	\subsection{Impedenza intrinseca}
-		\[
+		\begin{equation}
 		\eta=\sqrt{\frac{j\omega\mu}{\sigma+j\omega\epsilon_0\epsilon_r}}
-		\]
+		\end{equation}
 		
 
 	\subsection{Angolo di Brewster}
 
 	L'angolo di Brewster è l'angolo di incidenza a cui abbiamo trasmissione totale:
-	\[
+	\begin{equation}
 	\sin(\theta_B)=\sqrt{\frac{\epsilon_2}{\epsilon_2+\epsilon_1}}
 	\label{eq:brewster}
-	\]
+	\end{equation}
 
 
 
@@ -959,9 +1039,9 @@
 	Ricordiamo la propagazione di un onda piana in un mezzo:
 	
 
-	\[
+	\begin{equation}
 	E(x)=E_0e^{-\gamma x}
-	\]
+	\end{equation}
 	
 	Da cui usando la ~\ref{eq:campo-magnetico} possiamo calcolare il campo magnetico, e usando la ~\ref{eq:potenza-propagante} e la ~\ref{eq:potenza-dissipata} possiamo calcolare la potenza dissipata nel volume considerato.
 
@@ -1014,8 +1094,6 @@
 
 	\end{itemize}
 
-
-
 \chapter{Antenne}
 		\textbf{Formula generale\footnote{Valida per tutti i tipi di antenne.}}
 		\begin{equation}
@@ -1031,36 +1109,36 @@
 		Il campo elettrico radiale è un campo vicino che decade a distanze maggiori di $2\lambda$:
 		
 		\begin{equation}
-		E_r=\frac{I{l}}{2\pi}e^{-j\beta r}(\frac{ \eta_0}{R^2}+\frac{1}{j \omega \epsilon R^3})\cos(\theta)
+		E_r=\frac{I{l}}{2\pi}e^{-j\beta R}(\frac{ \eta_0}{R^2}+\frac{1}{j \omega \epsilon R^3})\cos(\theta)
 		\end{equation}
 		
-		\[
-		 E_{\theta} = \frac {Il} {4\pi} e^{-j\beta r} ( \frac {j\omega \mu_0} {R} + \frac {\eta_0} {R^2} + \frac {1}  {j \omega \epsilon R^3} ) \sin(\theta)
-		\]
+		\begin{equation}
+		 E_{\theta} = \frac {Il} {4\pi} e^{-j\beta R} ( \frac {j\omega \mu_0} {R} + \frac {\eta_0} {R^2} + \frac {1}  {j \omega \epsilon R^3} ) \sin(\theta)
+		\end{equation}
 
 		\subsection{Campo magnetico trasmesso}
 
 		\begin{equation}
-		H_{\phi}=\frac{Il}{4\pi}e^{-j\beta r}(\frac{j \beta}{R}+\frac{1}{R^2})\sin(\theta)
+		H_{\phi}=\frac{Il}{4\pi}e^{-j\beta R}(\frac{j \beta}{R}+\frac{1}{R^2})\sin(\theta)
 		\end{equation}
 
 		\subsection{Potenza trasmessa}
 
-	  \[
+	  \begin{equation}
 	  P_T=\frac{1}{2}|I|^2R_r
-	  \]
+	  \end{equation}
 
 	  	\subsection{Potenza dissipata}
 
-	  \[
+	  \begin{equation}
 	  P_{diss}=\frac{1}{2}|I|^2R_d
-	  \]
+	  \end{equation}
 
 	  \subsection{Efficienza}
 
-	  	\[
+	  	\begin{equation}
 		\nu=\frac{P_{T}}{P_{tot}}
-	  	\]
+	  	\end{equation}
 
 
 		\section{Dipoli elettrici in ricezione}
@@ -1094,9 +1172,9 @@
 			
 			\subsection{Densità di potenza incidente}
 
-			\[
+			\begin{equation}
 			S_{inc}=\frac{|E_{inc}|^2}{\eta_0}	
-			\]
+			\end{equation}
 
 			\subsection{Tensione a vuoto}			
 				Dalla ~\ref{eq:lunghezza-equivalente} otteniamo il valore della tensione ai capi dell'antenna:
@@ -1120,9 +1198,9 @@
 
 		 	\subsection{Tensione a vuoto}
 
-				 \[
+				 \begin{equation}
 				 V_0=j\omega\mu_0\mu_rH_{\perp}N*Area
-				 \]
+				 \end{equation}
 
 				 Dove:
 				 \begin{itemize}
@@ -1132,17 +1210,17 @@
 
 			\subsection{Densità di potenza}
 
-			 	\[
+			 	\begin{equation}
 			 	S_{inc}=\frac{HE}{2}=\frac{H^2\eta_0}{2}
-			 	\]
+			 	\end{equation}
 
 			 	%Da cui ricordando la
 			\subsection{Resistenza di radiazione}
 				 Mentre la resistenza di radiazione viene calcolata come:
 
-				 \[
+				 \begin{equation}
 				 R_{r_{sol}}=N^2R_{r_{R}}=N^2\eta_0\frac{8\pi^3}{3}(\frac{Area}{\lambda^2})^2
-				 \]
+				 \end{equation}
 
 
         \newpage

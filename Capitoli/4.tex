@@ -1,0 +1,197 @@
+
+\chapter{Linee di Trasmissione}
+
+	\section{Capacità}
+
+	
+		\subsection{Linee Coassiali}
+				\begin{equation}
+				C=\frac{2\pi \epsilon_0 \epsilon_r} {ln (\frac { r_{out}} {r_{in} } )}
+				\end{equation}
+
+				Se la linea è rimepita con diverse sezioni di circonferenza di dielettrici, questa puo essere modellizata come il parallelo di due capacità sommate pesandole sulla percentuale di volume occupata dai rispettivi dielettrici.
+			
+				Se la linea è riempita con dielettrici diversi coassiali, si puo considerare come due coassiali in serie e la capacità risulta come capacità in serie.\footnote{Si ricordi invece che il calcolo dell'induttanza rimane invariato}
+
+
+		\subsection{Linee Bifilari}
+
+			Utilizzando l'approssimazione dei conduttori sottili si può scrivere che la capacità per unità di lunghezza è data dal rapporto fra la carica per unità di lunghezza e la 
+			differenza di potenziale tra i due fili\footnote{vedi la ~\ref{eq:potenzialebifilari}}.
+			
+
+			\begin{equation}
+			C=\frac{\rho_l 2 \pi \epsilon_0}{\rho_l ln(\frac{d^2}{R^-R^+})}
+			\label{eq:capacitabifilare}
+			\end{equation}
+
+
+
+		\subsection{Microstrisce}
+
+	
+
+	 		Se la linea è costituita da tratti riempiti con dielettrico di diversa natura, la linea può essere modellizzata come più capacità in parallelo calcolate come:
+
+	 		\begin{equation}
+			C=\epsilon_0 \epsilon_r\frac{w}{h}	 			
+	 		\end{equation} 
+	 		dove:
+	 		\begin{itemize}
+	 		\item $w$ è la lunghezza del settore di linea considerato.
+	 		\item $h$ è la distanza tra le strisce
+	 		\end{itemize}
+
+
+	\section{Induttanza}
+
+		\subsection{Linee coassiali}
+
+			Per il calcolo dell’induttanza non è necessario tenere conto della presenza del dielettrico
+			poiché questa è indipendente da esso e quindi è pari a quella in aria.
+		
+			\begin{equation}
+				L=\frac{\mu_0 \epsilon_0}{C_0}=\frac{\mu_0 \epsilon_0 ln (\frac { r_{out}} {r_{in} } )}{2\pi \epsilon_0}
+			\end{equation}
+
+
+
+		\subsection{Linee bifilari}
+
+		Ricordando la ~\ref{eq:capacitabifilare} e la relazione $L=\frac{\mu_0 \epsilon_0}{C_0}$ è immediato calcolare l'induttanza della linea.
+
+		\subsection{Microstrisce}
+			
+			Per il calcolo dell’induttanza, analogamente a quanto detto per la linea coassiale, non è necessario tenere conto della presenza del dielettrico
+			poiché questa è indipendente da esso e quindi è pari a quella in aria.
+		
+			\begin{equation}
+				L=\frac{\mu_0 \epsilon_0}{C_0}=\mu_0 \frac{h}{w}
+			\end{equation}
+	
+
+
+	\section{Impedenza caratteristica}
+
+			L'impedenza caratteristica di una linea di trasmissione è il rapporto dei moduli della tensione e della corrente che si propagano in una linea distribuita in una singola direzione, in assenza di riflessioni.
+
+			\begin{equation}
+				Z_c=\sqrt{\frac{L}{C}}
+			\end{equation}
+
+	\section{Spessore pelle}
+			Lo spessore pelle indica la profondità di penetrazione del campo in un conduttore.
+			\begin{equation}
+			\delta=\frac{1}{	\sqrt{\pi \sigma f \mu_o}}
+			\end{equation}
+
+	\section{Velocità di fase}
+			 La velocità di fase può essere visualizzata come la velocità di propagazione di una cresta dell'onda ma non coincide necessariamente con la velocità di propagazione di un segnale (che è più propriamente descritta dalla velocità di gruppo) e quindi può essere più alta della velocità della luce senza violare la relatività ristretta.
+			\begin{equation}
+				v_f=\frac{1}{\sqrt{LC}}
+			\end{equation}
+
+	\section{Resistenza}
+
+		\subsection{Linee Coassiali}
+
+			La resistenza per unità di lunghezza si calcola come:
+
+			\begin{equation}R=\frac{1}{\sigma \delta p}=\frac{1}{\sigma \delta 2 \pi}(\frac{1}{r_{out}}+\frac{1}{r_{in}})\end{equation}
+			dove:
+			
+			\begin{itemize}
+			\item $\sigma$ è la conducibilità del conduttore.
+			\item $\delta$ è lo spessore pelle.
+			\item $p$ è il perimetro della sezione nel conduttore interessata dal passaggio di corrente.
+			\end{itemize}
+
+		\subsection{Linee bifilari}
+
+				La resistenza per unità di lunghezza per una linea bifilare si calcola come:
+
+				\begin{equation}R=\frac{2w}{\sigma \delta}\end{equation}
+				dove:
+				
+				\begin{itemize}
+				\item $\sigma$ è la conducibilità del conduttore
+				\item $\delta$ è lo spessore pelle
+				\item $w$ è la lunghezza della linea
+				\end{itemize}
+
+		\subsection{Microstrisce}
+
+			Analogamente ai casi precedenti si calcola le resistenza considerando il solo spessore di conduttore ricavato con lo spessore pelle e la larghezza della microstriscia.\footnote{Il calcolo è quindi analogo alla linea coassiale sostiuendo il perimetro con la larghezza della microstriscia.}
+
+	\section{Conduttanza per unità di lunghezza}
+
+			\begin{equation}
+			g=\frac{\sigma C}{\epsilon}
+			\end{equation}
+
+	%g=\frac{\sigma_d * Area}{h}	= \sigma_d \frac{w}{h}
+
+
+
+
+	\section{Costante di attenuazione dovuta ai conduttori}
+	
+			La costante di attenuazione dovuta alla conducibilità finita dei conduttori si trova da:
+			\begin{equation}
+			\alpha_c=\frac{R}{2Z_c}
+			\end{equation}
+		
+	\section{Costante di attenuazione dovuta al dielettrico}
+	
+			L'attenuazione dovuta alle perdite\footnote{per unità di lunghezza.} nel dielettrico è conseguenza di una conducibiltà non nulla di materiali non ideali.
+
+			\begin{equation}
+			\alpha_d=\frac{g}{2Y_c}
+			\end{equation}
+
+	\section{Attenuazione totale}
+
+			\begin{equation}
+			A=\alpha L
+			\end{equation}
+			Dove:
+			\begin{itemize}
+			\item L è la lunghezza totale della linea.
+			\item $\alpha=\alpha_d+\alpha_c$ è la costante di attenuazione totale che tiene conto sia delle perdite nel dielettrico che nei conduttori.
+			\end{itemize}
+
+	\section{Conversione Np-dB}
+
+	\begin{equation}
+	1\frac{Np}{m}=8686\frac{dB}{km}=8,686\frac{dB}{m}
+	\end{equation}
+	
+	\section{Potenza associata all'onda progressiva}
+
+			\begin{equation}
+			P=\frac{1}{2}\frac{|V^+|^2}{Z_0}=\frac{1}{2}|I^+|^2 Z_0
+			\end{equation}
+
+	\section{Potenza dissipata}
+
+			\begin{equation}
+			P_{diss,COND}=\frac{1}{2}|I_{max}|^2 r
+			\end{equation}
+
+			\begin{equation}
+			P_{diss,DIEL}=\frac{1}{2} g V^2
+			\end{equation}
+
+	\section{Campo magnetico massimo}
+	
+ 			Ricordando la legge di Ampere conoscendo la corrente massima si può calcolare i campo magnetico massimo come:
+
+			\begin{equation}
+			2 \pi a |H_{max}| = |I_{max}|
+			\end{equation}
+
+	\section{Costante di fase}
+			%		    \subsection{Microstrisce}
+			\begin{equation}
+				\beta=\omega \sqrt{LC}=2 \pi f \sqrt{LC}
+			\end{equation}

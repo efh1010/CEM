@@ -1,0 +1,114 @@
+
+\chapter{Propagazione di onde piane}
+
+	\subsection{Campo elettrico}
+	Usando la definizione di impedenza intrinseca si ricava la relazione tra campo elettrico e magnetico in un mezzo:
+		\begin{equation}
+		E=H\eta
+		\label{eq:campo-elettrico}
+		\end{equation}
+		
+
+	\subsection{Campo magnetico}
+	Analogamente alla ~\ref{eq:campo-elettrico} si ha: 
+		\begin{equation}
+		H=\frac{E}{\eta}
+		\label{eq:campo-magnetico}
+		\end{equation}
+	
+
+	\subsection{Potenza propagante}
+
+
+		\begin{equation}
+		P=S*Area=\frac{EH}{2}*Area=\frac{E^2}{2\eta}*Area=\frac{H^2\eta}{2}*Area
+		\label{eq:potenza-propagante}
+		\end{equation}
+	
+	\subsection{Potenza dissipata}
+
+		La potenza dissipata in un mezzo si calcola come la differenza tra la potenza finale e quella iniziale.
+		\begin{equation}
+			P_{diss}=P_{finale}-P_{iniziale}
+			\label{eq:potenza-dissipata}
+		\end{equation}
+	
+	\subsection{Costante di propagazione d'onda}
+		\begin{equation}
+		\gamma=\sqrt{j\omega\mu(\sigma+j\omega\epsilon_0\epsilon_r)}
+		\end{equation}
+	\subsection{Impedenza intrinseca}
+		\begin{equation}
+		\eta=\sqrt{\frac{j\omega\mu}{\sigma+j\omega\epsilon_0\epsilon_r}}
+		\end{equation}
+		
+
+	\subsection{Angolo di Brewster}
+
+	L'angolo di Brewster è l'angolo di incidenza a cui abbiamo trasmissione totale:
+	\begin{equation}
+	\sin(\theta_B)=\sqrt{\frac{\epsilon_2}{\epsilon_2+\epsilon_1}}
+	\label{eq:brewster}
+	\end{equation}
+
+
+
+
+	\subsection{Propagazione}
+	Ricordiamo la propagazione di un onda piana in un mezzo:
+	
+
+	\begin{equation}
+	E(x)=E_0e^{-\gamma x}
+	\end{equation}
+	
+	Da cui usando la ~\ref{eq:campo-magnetico} possiamo calcolare il campo magnetico, e usando la ~\ref{eq:potenza-propagante} e la ~\ref{eq:potenza-dissipata} possiamo calcolare la potenza dissipata nel volume considerato.
+
+
+	\subsection{Polarizzazione}
+
+	Conoscendo le componenti x e y del campo elettrico è possibile individuale la polarizzazione dell'onda.
+
+	\raggedright	{1) Se i moduli della componente x e y sono diversi\footnote{A meno che le due componenti non abbiamo sfasamento o nullo o uguale a $\pi$.}:}
+
+	\begin{itemize} 
+	\item \textbf{Polarizazzione ellittica}
+	\end{itemize}
+	\raggedright{	2) Se le due componenti sono uguali in modulo, si disegnano sul piano di Gauss i fasori corrispondenti ai campi $E_x$ ed $E_y$.}
+	\begin{itemize}
+	\item \textbf{Polarizzazione lineare}: se i due vettori hanno la stessa fase\footnote{Sono sovrapposti sul piano di Gauss} o sono sfasati di $\pi$.
+	\item \textbf{Polarizzazione Circolare} se i due vettori hanno uno sfasamento.
+	\end{itemize}
+		
+	Rimane ora da determinare la tipologia di polarizzazione circolare.
+	
+	\raggedright{3) Individuiamo il senso di rotazione:}
+
+	\begin{itemize}
+
+	\item Antiorario: se abbiamo un onda propagante ($e^{-\beta z}$)
+	\item Orario: se abbiamo un onda antipropagante ($e^{+\beta z}$)
+
+	\end{itemize}
+	\raggedright{4) Dobbiamo far ruotare uno dei due vettori, tenendo fermo l'altro, in modo da chiudere l'angolo convesso\footnote{$<180$} formato dai due.}
+
+	\raggedright{	5) Determiniamo ora la polarizzazione secondo il seguente schema:}
+
+	\begin{itemize}
+	\item Polarizzazione Circolare sinistra: se è il vettore $x$ a muoversi verso $y$ 
+	\item Polarizzazione Circolare destra: se è il vettore $y$ a muoversi verso $x$ 
+	\end{itemize}	
+
+
+	\section{Riconoscimento onde TEM}
+	Affinchè un'onda possa essere chiamate onda TEM devono verificarsi le seguenti:
+
+	\begin{itemize}
+
+	\item Campo elettrico e magnetico siano in fase 
+
+	\item Campo elettrico e campo magnetico siano proporzionali come $E=\eta H$
+
+	\item Campo elettrico e campo magnetico devono essere perpendicolari tra loro e l'onda deve propagarsi su una terza direzione a loro perpendicolare
+
+	\end{itemize}

@@ -1,0 +1,106 @@
+\chapter{Propagazione in linea}
+
+
+
+	\section{Potenza}
+		In caso di adattamento abbiamo che tutta la potenza disponibile è trasferita al carico e in particolare vale:
+			
+			\begin{equation}
+			P_L=P_d=(\frac{V_g}{2})^2\frac{1}{2Z_g}=\frac{V_g^2}{8Z_g}
+			\end{equation}
+
+			La potenza trasmessa al carico può anche essere calcolata tramite il vettore di pointing e il coefficiente di riflessione:
+
+			\begin{equation}
+			S_{tr}=S_{inc}(1-|\Gamma|^2)
+			\end{equation}
+
+			Analogo discorso si può fare con la potenza.
+			La potenza trasferita al carico risulta essere:
+
+			\begin{equation}
+			P_{load}=P_{inc}(1-|\Gamma|^2)
+			\end{equation}
+	\section{Tensione al carico}
+
+			\begin{equation}
+			P_L=\frac{V_{L}}{2}Re\{Y_L\}
+			\label{eq:tensionealcarico}
+			\end{equation}
+
+			Tale relazione può essere utilizzata per ricavare la tensione in ogni punto della linea considerando la potenza e l'impedenza viste ad una determinata interfaccia.
+	\section{Corrente al carico}
+
+
+			\begin{equation}
+			P_L=\frac{I_{L}}{2}Re\{Z_L\}
+			\label{eq:correntealcarico}
+			\end{equation}
+			Come per la \ref{eq:tensionealcarico} tale relazione può essere utilizzata in ogni punto della linea.
+	\section{Legge di Ohm}
+
+	Possiamo utilizzare la legge di Ohm per ricavare la corrente conoscendo la tensione o viceversa , utilizzando il modulo dell impedenza come segue:
+
+	\begin{equation}
+	I_L=\frac{V_L}{|Z_L|}
+	\end{equation}
+
+			Come per la \ref{eq:tensionealcarico} e la \ref{eq:correntealcarico} tale relazione può essere utilizzata in ogni punto della linea.
+
+
+	\section{Attenuazione}
+
+		Se in linea abbiamo delle perdite e conosciamo il coefficiente di attenuazione $\alpha$, sappiamo che la potenza si propaga come:
+		\begin{equation}
+		P(x)=P_0e^{-2 \alpha x}
+		\end{equation}
+
+		Si ricordi come in presenza di perdite in linea la potenza erogata risulta uguale alla somma della potenza dissipata lungo la linea e alla potenza trasferita al carico:
+
+		\begin{equation}
+		P_{erogata}=P_{diss}+P_{load}
+		\end{equation}
+
+	\section{Rapporto d'onda stazionaria}
+
+	\begin{equation}
+	ROS=\frac{|V_{max}|}{|V_{min}|}=\frac{|V_o^+|(1+|\Gamma|)}{|V_o^+|(1-|\Gamma|)}
+	\end{equation}
+
+	\section{Linee attenuative}
+
+		\subsection{Coefficiente di riflessione al carico}
+
+		\begin{equation}
+		\Gamma_L=\frac{Z_L-Z_C}{Z_C+Z_L}
+		\end{equation}
+
+
+
+		\subsection{Coefficiente di riflessione attenuato}
+		Lungo la linea con perdite il coefficiente di riflessione viene attenuato come:
+		\begin{equation}
+		\Gamma_{attenuato}=\Gamma_L e^{-2\alpha L}
+		\end{equation}
+		Riportando sulla carta di Smith il coefficiente di riflessione attenuato possiamo ottenere l'impedenza vista all'interfaccia di ingresso, da cui è possibile ricavare il coefficiente di riflessione in ingresso:
+
+		\begin{equation}
+		\Gamma_{in}=\frac{Z_{in}-Z_G}{Z_G+Z_{in}}
+		\end{equation}
+
+		Da cui conoscendo la potenza incidente possiamo ricavare la potenza immessa in linea come:
+
+		\begin{equation}
+		P_{in}=P_d(1-|\Gamma_{in}|^2)
+		\end{equation}
+
+		\subsection{Tensione all'interfaccia di ingresso}
+
+		Conoscendo l'impedenza di ingresso possiamo applicare un partitore di tensione come:
+
+		\begin{equation}
+		V_{in}=V_g|\frac{Z_{in}}{Z_{in}+Z_g}|
+		\end{equation}
+		\textbf{NOTA:}
+
+		Si faccia attenzione al fatto che trattando potenze propaganti in linea è necessario considerare solo le parti reali delle impedenze o delle ammettenze.

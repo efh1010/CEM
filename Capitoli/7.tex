@@ -1,0 +1,110 @@
+\chapter{Adattamento}
+
+	\section{Adattatore con nutralizzatore}
+
+		L'adattatore con neutralizzatore è un tratto di linea da inserire tra il carico e la fine dell'adattatore lambda quarti ed è utilizzato e dimensionato in modo che porti all'interfaccia del $\frac{\lambda}{4}$ un impendenza reale pura.
+
+	\section{Adattatore lambda quarti}
+		
+		L'adattatore lambda quarti è un tratto di linea con impedenza caratteristica e lunghezza da dimensionare opportunamente che viene inserito per adattare il carico alla linea.
+
+		\subsection{Impedenza caratteristica}
+				Muovendosi sulla carta di smith è necessario trovare le impedenze viste ad entrambe le interfacce dell'adattore.
+
+				\begin{equation}
+				\eta_{\frac{\lambda}{4}}=\sqrt{\eta_{dx}\eta_{sx}}
+				\end{equation}
+
+		\subsection{Lunghezza della linea}
+				Imponendo le condizioni di interferenza distruttiva tra le onde riflesse alle 2 interfaccie si trova che la lunghezza del tratto di linea da inserire deve essere un quarto della lunghezza d'onda:\footnote{Eventualmente da modificare a seconda della costante dielettrica del mezzo in caso di linea equivalente ad un multistrato.}
+				\begin{equation}
+				L_s= \frac {\lambda} {4}
+				\end{equation}
+
+	\section{Stub parallelo}
+
+		Dimensionando l'adattamento con stub parallelo è necessario lavorare con la carta delle ammettenze\footnote{Si ricordi che nella carta delle ammettenze il corto circuito si trova a destra.}, ogni impedenza $Z$ va quindi trasformata in ammettenza come: $Y=\frac{1}{Z}$
+
+		\subsection{Corto circuito}
+				
+			Per l'adattamento con stub parallelo si trova l'ammettenza del carico $Y_L=\frac{1}{Z_L}$ e la si normalizza per l'ammettenza caratteristica del tratto di linea attraverso cui ci si sta muovendo: $\overline{Y_{LL}}=\frac{Y_L}{Y_O}$.
+
+
+			A questo punto riportando $\overline{Y_{LL}}$ sulla carta delle ammetenze , ruoto fino ad individuale i punti di intersezione con la circonferenza unitaria
+
+			Indivuduata la parte immaginaria dell'impedenza , partendo dal corto circuito ruoto sulla circonferenza esterna della carta di smith\footnote{Circonferenza a parte reale.} ruoto fino al punto a parte immaginaria opposta rispetto a quella dell'impedenza dovuta al carico e determino cosi la lunghezza dello stub.
+
+		\subsection{Circuito aperto}
+
+		Il procedimento per il dimensionamento di stub parallelo a circuito aperto è analogo a quello utilizzato per lo stub parallelo a corto circuito con l'unica differenza che nel determinare la lunghezza dello stesso la rotazione sulla carta di Smith deve partire dal punto ad impedenza infinita, cioè ammettenza nulla\footnote{Al contrario del procedimento adottato per gli stub corto circuito.}.
+
+
+
+		\subsection{Doppio stub parallelo}
+
+			\begin{itemize}
+			
+			\item Normalizzo il carico all'impedenza caratteristica della linea e ne faccio l'ammettenza.
+			\item Utilizzando la carta di Smith\footnote{Delle ammettenza} e conoscendo la lunghezza del tratto di linea trovo l'ammettenza vista a monte del primo stub.  
+			\item Partendo dal generatore so che, dovendo adattare la linea, l'ammettenza dovrà essere unitaria, a cui viene sommato lo stub\footnote{Ammettenza puramente reattiva} e quindi l'ammettenza a valle del secondo stub sarà sul cerchio a parte reale unitaria.  
+			\item A questo punto, sempre utilizzando la carta di Smith e conoscendo la lunghezza del tratto di linea che separa i due stub ruoto tutto il cerchio a parte unitaria.
+			\item Ora, partendo dal punto corrispondente all'ammettenza a monte del primo stub, ruoto a parte reale costante fino ad incontrare il cerchio precedentemente ruotato.
+			\item Si trova quindi l'ammettenza dello stub come differenza tra la parte immaginaria dell'ammettenza trovata sul cerchio ruotato e dell'ammettenza a monte del primo stub. 
+			\item Per ricavare quindi la lunghezza dello stub si denormalizza l'ammettenza trovata (con l'impedenza caratteristica della linea) e la si rinormalizza all'impedenza caratteristica del tratto di stub. A questo punto si trova sulla carta di Smith la frazione di lambda da imporre per avere l'ammettenza desiderata.  
+			\item Si ruota ora il punto intersecato sul cerchio ruotato, sul cerchio a parte reale unitaria.
+			\item L'ammettenza dello stub sarà quindi l'opposto dell'ammettenza appena trovata sul cerchio unitario.
+			\item Si può quindi trovare la lunghezza dello stub con un procedimento analogo a quello utilizzato per l'altro stub.
+			
+			\end{itemize}
+
+	\textbf{NOTA:}
+
+	Si ricordi che sarebbe possibile utilizzare anche la carta di Smith delle impedenze per trattare stub parallelo, bisognerebbe però avere l'accortezza di comporre le impedenze in parallelo, non in sommandole in serie come è possbile fare con le ammettenze.
+
+	
+	\section{Stub serie}
+
+	 	Il metodo di dimensionamento degli stub serie è duale a quello per gli stub parallelo. E' però necessario usare la carta di Smith delle impedenze, sommando queste tra loro.
+
+		\subsection{Doppio stub serie}
+
+			\begin{itemize}
+
+			\item Normalizzo il carico all'impedenza caratteristica della linea.
+			\item Utilizzando la carta di Smith\footnote{Delle impedenze} e conoscendo la lunghezza del tratto di linea trovo l'impedenza vista a monte del primo stub.  
+			\item Partendo dal generatore , so che dovendo adattare la linea l'impedenza dovrà essere unitaria , a cui viene sommato lo stub\footnote{Impedenza puramente reattiva} e quindi l'impedenza a valle del secondo stub sarà sul cerchio a parte reale unitaria.  
+			\item A questo punto, sempre utilizzando la carta di Smith e conoscendo la lunghezza del tratto di linea che separa i due stub ruoto tutto il cerchio a parte unitaria.
+			\item A questo punto, partendo dal punto corrispondente all'impedenza a monte del primo stub, ruoto a parte reale costante fino ad incontrare il cerchio precedentemente ruotato.
+			\item Si trova quindi l'impedenza dello stub come differenza tra la parte immaginaria dell'impedenza trovata sul cerchio ruotato e dell'impedenza a monte del primo stub. 
+			\item Per ricavare quindi la lunghezza dello stub si denormalizza l'impedenza trovata (con l'impedenza caratteristica della linea) e la si rinormalizza all'impedenza caratteristica del tratto di stub. A questo punto si trova sulla carta di Smith la frazione di lambda da imporre per avere l'impedenza desiderata.  
+			\item Si ruota ora il punto intersecato sul cerchio ruotato, sul cerchio a parte reale unitaria.
+			\item L'impedenza dello stub sarà quindi l'opposto dell'impedenza appena trovata sul cerchio unitario.
+			\item Si può quindi trovare la lunghezza dello stub con un procedimento analogo a quello utilizzato per l'altro stub.
+			
+			\end{itemize}
+
+	\section{Adattamento con carico reattivo}
+
+		Analogamente a quanto visto per gli adattatori lambda-quarti e stub parallelo e serie, un altro metodo di adattamento del carico consiste nell'inserimento in linea di un carico reattivo\footnote{Capacità o induttanza.}.
+
+		Analogamente al discorso fatto per gli stub il carico reattivo puuò essere aggiunto in serie o in parallelo.
+
+		\subsection{Serie}
+			Con un approccio analogo a quello utilizzato per gli stub serie si lavora con la carta di Smith delle impedenze.
+		\subsection{Parallelo}
+					Con un approccio analogo a quello utilizzato per gli stub parallelo si lavora con la carta di Smith delle ammettenze.
+
+	\section{Tensione su carico adattato}
+
+	Per trovare la tensione sul carico adattato si utilizza l'espressione:
+
+	\begin{equation}
+	P_d= \frac {V_{load}^2}{2} Re\{ Y_{load}] \}
+	\end{equation}
+	Poichè tutta la potenza disponibile viene trasferita al carico.
+
+	Per trovare invece la corrente che fluisce nel carico si utilizza la legge di ohm:
+
+	\begin{equation}
+	I=\frac{V}{|Z_{load}|}
+	\end{equation}

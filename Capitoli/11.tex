@@ -1,0 +1,133 @@
+\chapter{Antenne}
+		\textbf{Formula generale\footnote{Valida per tutti i tipi di antenne.}}
+		\begin{equation}
+		\frac{G}{A_e}=\frac{4\pi}{\lambda^2}
+		\end{equation}
+	    Dove G è il guadagno che si calcola come $G=\mu D$\footnote{Dove $D=\frac{S_{reale}}{S_{isotropa}}$ è la direttività.}.
+
+	    Il
+	 \section{Dipoli elettrici in trasmissione}
+
+		\subsection{Campo elettrico trasmesso}
+
+		Il campo elettrico radiale è un campo vicino che decade a distanze maggiori di $2\lambda$:
+		
+		\begin{equation}
+		E_r=\frac{I{l}}{2\pi}e^{-j\beta R}(\frac{ \eta_0}{R^2}+\frac{1}{j \omega \epsilon R^3})\cos(\theta)
+		\end{equation}
+		
+		\begin{equation}
+		 E_{\theta} = \frac {Il} {4\pi} e^{-j\beta R} ( \frac {j\omega \mu_0} {R} + \frac {\eta_0} {R^2} + \frac {1}  {j \omega \epsilon R^3} ) \sin(\theta)
+		\end{equation}
+
+		\subsection{Campo magnetico trasmesso}
+
+		\begin{equation}
+		H_{\phi}=\frac{Il}{4\pi}e^{-j\beta R}(\frac{j \beta}{R}+\frac{1}{R^2})\sin(\theta)
+		\end{equation}
+		\subsection{Resistenza di radiazione}			
+				\begin{equation}
+				R_r=\frac{2}{3}\pi\eta_0(\frac{l_e}{\lambda})^2
+				\end{equation}
+
+
+
+		\subsection{Potenza trasmessa}
+
+	  \begin{equation}
+	  P_T=\frac{1}{2}|I|^2R_r
+	  \end{equation}
+
+	  	\subsection{Potenza dissipata}
+
+	  \begin{equation}
+	  P_{diss}=\frac{1}{2}|I|^2R_d
+	  \end{equation}
+
+	  \subsection{Efficienza}
+
+	  	\begin{equation}
+		\nu=\frac{P_{T}}{P_{tot}}
+	  	\end{equation}
+
+
+		\section{Dipoli elettrici in ricezione}
+
+			\subsection{Resistenza di radiazione}			
+				\begin{equation}
+				R_r=\frac{2}{3}\pi\eta_0(\frac{l_e}{\lambda})^2
+				\end{equation}
+
+			\subsection{Area equivalente}			
+				\begin{equation}
+				A_e=|l_e|^2\frac{\eta_0}{4R_r}
+				\end{equation}
+
+			\subsection{Lunghezza equivalente}			
+				\begin{equation}
+				l_e=\frac{V_0}{E_{inc}}
+				\label{eq:lunghezza-equivalente}
+				\end{equation}
+
+			\subsection{Potenza disponibile}			
+				\begin{equation}
+						P_d=\frac{|V_0|^2}{8(R_r+R_d)}
+				\end{equation}
+			Dove:
+
+			\begin{itemize}
+			\item $R_r$ è la resistenza di radiazione.
+			\item $R_d$ è la resistenza interna.
+			\end{itemize}
+			
+			\subsection{Densità di potenza incidente}
+
+			\begin{equation}
+			S_{inc}=\frac{|E_{inc}|^2}{\eta_0}	
+			\end{equation}
+
+			\subsection{Tensione a vuoto}			
+				Dalla ~\ref{eq:lunghezza-equivalente} otteniamo il valore della tensione ai capi dell'antenna:
+				\begin{equation}
+				V_0=E_{inc}l_e
+				\end{equation}
+
+		\section{Spira}
+
+			\subsection{Campo elettrico}
+
+				\begin{equation}
+				E_\phi=\frac{-j\omega\mu I*Area}{4\pi}\frac{j\beta}{R}\sin(\theta)e^{-j\beta R}
+				\end{equation}
+
+		\section{Solenoide ricevente}
+			
+			Possiamo modellizzare il solenoide come la serie di una resistenza e di una induttanza.
+
+			Ricordiamo dalla ~\ref{eq:induttanza-solenoide} l'induttanza del solenoide.
+
+		 	\subsection{Tensione a vuoto}
+
+				 \begin{equation}
+				 V_0=j\omega\mu_0\mu_rH_{\perp}N*Area
+				 \end{equation}
+
+				 Dove:
+				 \begin{itemize}
+				 \item N è il numero di spire del solenoide 
+				 \item $H_{\perp}$ è il campo magnetico incidente in direzione assiale rispetto al solenoide
+				 \end{itemize}
+
+			\subsection{Densità di potenza}
+				Come già visto nella \ref{eq:potenza-propagante}:
+			 	
+			 	\begin{equation}
+			 	S_{inc}=\frac{HE}{2}=\frac{H^2\eta_0}{2}
+			 	\end{equation}
+
+			\subsection{Resistenza di radiazione}
+				 Mentre la resistenza di radiazione viene calcolata come:
+
+				 \begin{equation}
+				 R_{r_{sol}}=N^2R_{r_{R}}=N^2\eta_0\frac{8\pi^3}{3}(\frac{Area}{\lambda^2})^2
+				 \end{equation}

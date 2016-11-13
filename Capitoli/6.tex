@@ -1,0 +1,195 @@
+\chapter{Incidenza obliqua}
+
+	Avendo una radiazione incidente con angolo obliquo su un intefaccia tra dielettrici diversi per studiare la trasmissione nel mezzo 2 è necessario scomporre la radiazione in propagazione trasverso elettrica e trasverso magnetica.
+
+	\section{Angolo di incidenza}
+
+		\begin{equation}
+		\theta=arctan(\frac{E_z}{E_x})
+		\end{equation}
+
+
+
+	\section{Angolo di trasmissione}
+	Si ricava , utilizzando la legge di Snell:
+	\begin{equation}
+	\theta_T=\arcsin(\frac{\sqrt{\epsilon_{r1}}}{\sqrt{\epsilon_{r2}}}\sin(\theta_i)
+	\label{eq:leggedisnell}
+	\end{equation} 
+	
+	\section{Condizioni limite}
+
+		\subsection{T.I.R.}
+			La condizione di trasmissione totale interna implica un coefficiente di riflessione $\Gamma$ unitario.
+
+			\textbf{NOTA:}
+
+			Si ricordi che in caso si TIR il fatto che non ci sia potenza trasmessa nel mezzo 2 non implica il fatto che i campi siamo nulli.
+			L'intensità dei campi nel mezzo 2 possono essere calcolati attraverso la valutazione dell'onda evanescente:
+
+
+		\begin{equation}
+		|E|=E_0 e^{-2 \alpha x}
+		\end{equation}
+
+		con:
+
+		\begin{equation}
+		\alpha= \frac{2 \pi}{\lambda}\sqrt{1-\sin^2(\theta_t)}
+		\end{equation}
+		
+		Si ricordi che non è possibile calcola l'angolo $\theta_t$ in quanto siamo in condizione di riflessione totale è pero possibile calcolarne il seno tramite la legge di Snell.
+
+
+		\subsection{Angolo di Brewster}
+
+			Nel caso di angolo di incidenza uguale all'angolo di Brewster\footnote{Vedi la ~\ref{eq:brewster}} abbiamo trasmissione totale nel mezzo 2, cioe $\Gamma=0$.
+
+			Si ricordi che viene trasmessa interamente solo la componente normale della potenza incidente.
+
+	\section{Modo trasverso elettrico}
+
+		\subsection{Impedenza caratteristica TE}
+			\begin{equation}
+			\eta_{TE}=\frac{\eta_0}{\sqrt{\epsilon_r}\cos(\theta)}
+			\end{equation}
+
+		\subsection{Coefficiente di riflessione}
+			Conoscendo le impedenze intrinseche posso calcolare il coefficiente di riflessione per il modo TE come:
+
+			\begin{equation}
+			\Gamma_{TE}=\frac{\eta_{TE2}-\eta_{TE1}}{\eta_{TE1}+\eta_{TE2}}
+			\end{equation}
+		%	 Si noti che questo coefficiente di riflessione è valido solo per la componente tangente del campo elettrico.
+
+			 \textbf{NOTA:}
+			 \\ 
+			 Nello studio della propagazione di modi trasverso elettrici il coefficiente di trasmissione $\Gamma_{TE}$ si può utilizzare solo per il calcolo del campo elettrico e non del campo magnetico , il quale si potrà poi essere calcolato utilizzando la ~\ref{eq:campo-magnetico}.
+
+		\subsection{Potenza trasmessa}
+
+			Per calcolare la potenza trasmessa nel mezzo 2:
+			\begin{itemize}
+			\item Proietto la potenza incidente sull'asse normale all'intefaccia.
+
+			\begin{equation}
+			S_{inc_\perp}=S_{inc}\cos(\theta_i)
+			\end{equation}
+
+			\item Tramite il coefficiente di trasmissione calcolo la componente normale della potenza trasmessa:
+			\begin{equation}
+			S_{t_\perp}=S_{inc_\perp}(1-|\Gamma_{TE_\perp}|^2)
+			\end{equation}
+
+			\item Conoscendo l'angolo di trasmissione e la componente normale è possibile calcolare la potenza totale trasmessa nel mezzo 2.
+
+			\begin{equation}
+			S_{t}=\frac{S_{t_\perp}}{\cos(\theta_t)}
+			\end{equation}
+			\end{itemize}
+		\subsection{Campo elettrico}
+
+			Per valutare il campo elettrico in un punto dello spazio devo valutare diversi coefficienti di propagazione:
+			\begin{equation}
+			\gamma=j\omega\sqrt{\mu\epsilon}\end{equation}
+
+			Da cui ricavo le due componenti:
+
+			\begin{equation}
+			\gamma_x=\gamma\sin(\theta)
+			\end{equation}
+
+			\begin{equation}
+			\gamma_y=\gamma\cos(\theta)
+			\end{equation}
+
+			E' quindi possibile esprimere il campo elettrico propagante\footnote{Valido sia per modi TE che TM} nel mezzo come:
+			
+			\begin{equation}
+			E(x,y)=E(0,0)e^-{j\gamma_x x}e^-{j\gamma_y y}
+			\end{equation}
+		
+			\textbf{NOTA:}
+
+			Si ricordi che studiando il modo trasverso elettrico il coefficiente di riflessione va applicato alla sola componente tangente del campo elettrico\footnote{Unica presente in modo TE.}.
+			
+	\section{Modo trasverso magnetico}
+
+			\subsection{Impedenza instrinseca TM}
+
+				\begin{equation}
+					\eta_{TM}=\frac{\eta_0}{\sqrt{\epsilon_r}}\cos(\theta)
+				\end{equation}
+
+			\textbf{NOTA:}
+
+			Si ricordi che studiando il modo trasverso magnetico il coefficiente di riflessione $\Gamma$ va utilizzato per calcolare la componente di campo elettrico trasmesso normale all'interfaccia.
+			Ricavando poi con la legge di Snell l'angolo di trasmissione e conoscendo la componente normale posso trovare il campo trasmesso totale.
+
+		\subsection{Coefficiente di riflessione}
+			Conoscendo le impedenze intrinseche posso calcolare il coefficiente di riflessione per il modo TM come:
+
+			\begin{equation}
+			\Gamma_{TM}=\frac{\eta_{TM2}-\eta_{TM1}}{\eta_{TM1}+\eta_{TM2}}
+			\end{equation}
+		
+			 
+			 \textbf{ NOTA: }
+			 
+			 Nello studio della propagazione di modi trasverso elettrici il coefficiente di trasmissione $\Gamma_{TM}$ si può utilizzare solo per il calcolo del campo magnetico e non del campo elettrico , il quale si potrà poi essere calcolato utilizzando la ~\ref{eq:campo-elettrico}.
+
+		\subsection{Potenza trasmessa}
+
+			Per calcolare la potenza trasmessa nel mezzo 2:
+			
+			\begin{itemize}
+			
+			\item Proietto la potenza incidente sull'asse normale all'intefaccia.
+			\begin{equation}
+			S_{inc_\perp}=S_{inc}\cos(\theta_i)
+			\end{equation}
+
+			\item Tramite il coefficiente di trasmissione calcolo la componente normale della potenza trasmessa:
+			\begin{equation}
+			S_{t_\perp}=S_{inc_\perp}(1-|\Gamma_{TM_\perp}|^2)
+			\end{equation}
+
+			\item Conoscendo l'angolo di trasmissione e la componente normale è possibile calcolare la potenza totale trasmessa nel mezzo 2.
+			\begin{equation}
+			S_{t}=\frac{S_{t_\perp}}{\cos(\theta_t)}
+			\end{equation}
+			
+
+			\end{itemize}
+		
+
+		\subsection{Campo magnetico}
+
+			Per valutare il campo magnetico in un punto dello spazio devo valutare diversi coefficienti di propagazione:
+			\begin{equation}
+			\gamma=j\omega\sqrt{\mu\epsilon}\end{equation}
+
+			Da cui ricavo le due componenti:
+
+			\begin{equation}
+			\gamma_x=\gamma\sin(\theta)
+			\end{equation}
+
+			\begin{equation}
+			\gamma_y=\gamma\cos(\theta)
+			\end{equation}
+
+			E' quindi possibile esprimere il campo magnetico propagante\footnote{Valido sia per modi TE che TM.} nel mezzo come:
+			
+			\begin{equation}
+			H(x,y)=H(0,0)e^-{j\gamma_x x}e^-{j\gamma_y y}
+			\end{equation}
+		
+
+		\section{Onde incidenti generiche}
+
+		In presenza di un onda non solamente TM o TE si studiano i due tipi di modi separatamente e si compongono alla fine con la somma quadratica\footnote{Ciò vale sia per le potenze che per i campi.}:
+
+		\begin{equation}
+		S_{t}=\sqrt{S_{t_{TE}}^2 +S_{t_{TM}}^2 }
+		\end{equation}

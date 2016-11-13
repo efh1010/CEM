@@ -1,0 +1,114 @@
+
+
+\chapter{Guide d'onda}
+		
+	\section{Modo trasverso elettrico}
+
+		\subsection{Campo elettrico}
+		E' possibile calcolare il campo elettrico in guida considerando la somma di componente incidente e componente riflessa, se è presente un interfaccia in cui c'è riflessione.
+				\begin{equation}
+				E_y= E_0e^{-j\beta z}+E_0 \Gamma e^{j \beta z}=E_0(e^{-j \beta z}+\Gamma e^{j \beta z}) =E_0(1 - \Gamma)e^{-j \beta z} + E_0 \Gamma \cos(\beta z)
+				\label{elettrico-guida}
+				\end{equation}
+				in cui $\beta=\frac{2 \pi }{\lambda_{TE}}$ e $\Gamma=\Gamma_{TE}$.
+		\\
+
+		Si ricordi che se non esiste componente riflessa il modulo del campo elettrico è costante in quanto si propaga come un onda viaggante e in quanto tale il suo inviluppo è costante.
+	
+		\subsection{Campo elettrico massimo}
+		Considerando la composizione di onda incidente e riflessa si ricava dalla ~\ref{elettrico-guida} la relazione per il campo elettrico massimo in guida:
+				\begin{equation}
+				E_{max}=E^+(1+|\Gamma|)
+				\label{elettrico-massimo}
+				\end{equation}
+		Si ricordi che in caso di onda viaggiante\footnote{Cioè assenza di riflessioni} il campo elettrico massimo corrisponde al campo elettrico incidente.
+
+		\subsection{Campo magnetico}
+
+		Tramite le relazioni ~\ref{eq:campo-elettrico} e ~\ref{eq:campo-magnetico} si ricava il campo magnetico.
+
+		\subsection{Campo magnetico massimo}
+		Dalla ~\ref{elettrico-massimo} è immediato ricavare il campo magnetico massimo.
+				\begin{equation}
+				H_{max}=H^+(1+|\Gamma|)=\frac{E^+}{\eta_{TE_{10}}}{(1+|\Gamma|)}
+				\end{equation}
+
+		\subsection{Frequenza di work}
+
+				\begin{equation}
+				f_w=\frac{\frac{c}{2a}+\frac{c}{2b}}{2}
+				\end{equation}
+
+				Si ricordi che questa relazione è valida solo nel caso in cui $b<a<2b$.
+
+		\subsection{Frequenza di cut}
+	
+				La frequenza di cut è la frequenza limite di funzionamento monomodale
+				\begin{equation}
+				f_c=\frac{c}{2a}\frac{1}{\sqrt{\epsilon_r}}
+				\end{equation}
+				Dove $a$ è il lato più lungo della guida.
+
+		\subsection{Lunghezza d'onda in setto di dielettrico}
+
+			\begin{equation}
+			\lambda_{TE}=\frac{1}{\sqrt{\epsilon_r}}\frac{\lambda_{work}}{\sqrt{1- (\frac{f_c}{\sqrt{\epsilon_r}f_w})^2}}
+			\end{equation}
+
+		\subsection{Impedenza modale nel vuoto}
+
+				\begin{equation}
+				\eta_{TE_{vuoto}}=\frac{\eta_0}{ \sqrt{ 1- ( \frac {f_{cut}} {f_{work}} )^2 } }
+				\end{equation}
+		\subsection{Impedenza modale nel setto di dielettrico}
+
+				\begin{equation}
+				\eta_{TE_{setto}}=\frac{\eta_0}{\sqrt{\epsilon_r} \sqrt{ 1- ( \frac {f_{cut}} {\sqrt{\epsilon_r} f_{work}} )^2 } }
+				\end{equation}
+
+		\subsection{Coefficiente di riflessione}
+
+			\begin{equation}
+			\Gamma_{TE}=\frac{\eta_{TE_{setto}}-\eta_{TE_{vuoto}}}{\eta_{TE_{vuoto}}+\eta_{TE_{setto}}}
+			\end{equation}
+		\subsection{Campo elettrico nel setto di dielettrico}
+		\begin{equation}
+		E_{max}=E_g(1+|\Gamma|)
+		\end{equation}
+
+		\begin{equation}
+		E_{min}=E_g(1-|\Gamma|)
+		\end{equation}
+
+
+		\subsection{Potenza in guida}
+				\begin{equation}
+				P_0=\frac{E_0^2}{4\eta_{TE}}ab
+				\end{equation}
+				Si noti che nel caso di inserimento di un setto $\lambda/2$ in guida abbiamo un onda viaggiante , l'inviluppo del campo elettrico è quindi costante tranne nel setto di dielettrico, in cui è simmetrico rispetto al punto medio.
+				Nel caso di $\frac{\lambda}{2}$ si ha che $E_0$ coincide con $E_{max}$.
+	\section{Riflessione totale interna}
+
+		E' possibile che in guida si presenti la condizione di TIR, in particolare quando la frequenza di cut di un tratto di linea è inferiore alla frequaneza della radiazione incidente.
+
+		In tal caso possiamo calcolare i campi propaganti nel setto di dielettrico in cui non si propaga l'onda come:
+
+
+		\begin{equation}
+		|E|=|E_0 e^{-j\gamma x}|=E_0 e^{- 2 \alpha x}
+		\end{equation}
+
+
+		\begin{equation}
+		\alpha=\frac{2 \pi}{\lambda}\sqrt{1-(\frac{f_c}{f_w})^2}
+		\end{equation}
+
+
+		\textbf{NOTA:}
+
+		Si ricodi la definizione di impedenza intrinseca del mezzo come:
+
+
+		\begin{equation}
+		\eta_0 = \sqrt{\frac{\mu_0}{\epsilon_0}} 
+		\end{equation}

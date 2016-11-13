@@ -1,0 +1,96 @@
+		
+\chapter{Propagazione in multistrato}
+
+	\section{Impedenza intrinseca}
+
+		L'impedenza intrinseca per la propagazione in un mezzo dielettrico\footnote{In assenza di perdite} si calcola come:
+
+		\begin{equation}
+		\eta=\frac{\eta_0}{\sqrt{\epsilon_r}}
+		\end{equation}
+
+		Dove $\eta_0=377\Omega$ è l'impedenza caratteristica del vuoto.
+
+		Se il dielettrico presenta una conducibilità equivalente non nulla l'impedenza instrinseca risulta:
+
+		\begin{equation}
+		\eta=\frac{j\omega\mu}{\sqrt{-\omega^2\mu\epsilon+j\omega\mu\sigma_{eq}}} [  \Omega  ]
+		\end{equation}
+		Dove la conducibilità equivalente si calcola come:
+
+		\begin{equation}
+		\sigma_{eq}=\omega \epsilon''
+		\end{equation}
+		Risulta $\epsilon=\epsilon'+j\epsilon''$.
+		
+		I coefficienti $\epsilon'$ e $\epsilon''$ vengono dati tramite il parametro\footnote{In cui si ricorda che la $\delta$ non ha nulla a che fare con lo spessore pelle.} $tan\delta=\frac{\epsilon''}{\epsilon'}$.
+
+	\section{Lunghezza d'onda in mezzi dielettrici}
+		Una radiazione che si propoaga in un mezzo con constante dielettrica diversa da quella del vuoto subisce una variazione della lunghezza d'onda:
+
+		\begin{equation} 
+		\lambda = \frac {\lambda_0} {\sqrt {\epsilon_r} }
+		\end{equation} 
+
+	\section{Equivalente in linea di trasmissione}
+
+		
+		La propagazione in un mezzo multistrato può essere modellizata come una linea di trasmissione in cui i vari spezzoni di linea hanno impedenza caratteristica uguale all'impedenza intrinseca del mezzo in cui si propagano.	
+		Si puo quindi studiare il problema con l'utilizzo della carta di Smith.
+
+	\section{Condizioni al contorno per il campo elettrico}
+
+		Nell'interfaccia tra mezzi con costante dielettrica diversa abbiamo che:
+		\begin{equation}
+		E_{t1}=E_{t2} 
+		\end{equation}
+		cioé $\epsilon_1 D_{t1} = \epsilon_2 D_{t2}$.
+		Mentre per la componente normale si ha:
+		\begin{equation}
+		D_{n1} = D_{n2}
+		\end{equation}
+		cioè:
+		\begin{equation}
+		E_{n1}\epsilon_1=E_{n2}\epsilon_2
+		\end{equation}
+
+	\section{Condizioni al contorno per il campo magnetico}
+		Nell'interfaccia tra mezzi con permeabilità magnetica diversa si ha:
+		\begin{equation}
+		B_{n1}=B_{n2} 
+		\end{equation}
+		cioé $\mu_1 H_{n1} = \mu_2 H_{n2}$.
+		Mentre si conserva la componente tangenziale\footnote{Assumendo nulla la densità superficiale di corrente all'intefaccia. Tenendone conto risulterebbe: $J_s=H_{t1}-H_{t2}$}.
+		\begin{equation}
+		H_{t1}=H_{t2}
+		\end{equation}
+
+	\section{Campo elettrico e campo magnetico}
+
+	Conoscendo la densità di potenza propagante possiamo calcolare il modulo di campo elettrico e magnetico come:
+
+	\begin{equation}
+	S=\frac{E^2}{2\eta_{mezzo}}=\frac{H^2}{2}\eta_{mezzo}
+	\end{equation}
+
+	\section{Vettore di Poynting}
+		Per una radiazione propagante in un mezzo possiamo calcolare il valore medio del vettore di Poynting come:
+		\begin{equation}
+		\overline{S_{avg}}=\frac{A^2}{2\eta}
+		\end{equation}
+		Dove A è l'ampiezza del campo elettrico.
+		E' possibile calcolare anche il valore istantaneo che risulta:
+
+		\begin{equation}
+		S_{ist}=\frac{A^2}{\eta}\cos^2(\omega t)
+		\end{equation}
+	
+	\section{Legge di snell}
+
+	La legge di snell viene utilizzata per studiare il caso semplificato di impedenza normale.
+
+	\begin{equation}
+	n_i \sin(\theta_i) = n_t \sin(\theta_t)
+	\end{equation}
+
+	Con $n_i=\sqrt{\epsilon_i}$ e $n_t=\sqrt{\epsilon_t}$.
